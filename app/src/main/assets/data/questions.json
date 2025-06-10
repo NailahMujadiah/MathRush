@@ -1,0 +1,2053 @@
+[
+  {
+    "topicId": "T01",
+    "title": "Penjumlahan",
+    "icon": "icon_penjumlahan",
+    "levels": [
+      {
+        "id": "E01",
+        "difficulty": "mudah",
+        "questions": [
+          {
+            "id": "T01-E01-Q01",
+            "displayQuestion": "4 + 6 = ___",
+            "apiExpression": "4+6",
+            "wrongChoices": ["8", "11", "7"]
+
+          },
+          {
+            "id": "T01-E01-Q02",
+            "displayQuestion": "7 + 8 = ___",
+            "apiExpression": "7+8",
+            "wrongChoices": ["14", "9", "18"]
+          },
+          {
+            "id": "T01-E01-Q03",
+            "displayQuestion": "3 + 5 = ___",
+            "apiExpression": "3+5",
+            "wrongChoices": ["10", "4", "7"]
+          },
+          {
+            "id": "T01-E01-Q04",
+            "displayQuestion": "10 + 2 = ___",
+            "apiExpression": "10+2",
+            "wrongChoices": ["9", "11", "14"]
+          },
+          {
+            "id": "T01-E01-Q05",
+            "displayQuestion": "6 + 9 = ___",
+            "apiExpression": "6+9",
+            "wrongChoices": ["19", "12", "16"]
+          },
+          {
+            "id": "T01-E01-Q06",
+            "displayQuestion": "4 + 9 = ___",
+            "apiExpression": "4+9",
+            "wrongChoices": ["8", "9", "10"]
+          },
+          {
+            "id": "T01-E01-Q07",
+            "displayQuestion": "8 + 3 = ___",
+            "apiExpression": "8+3",
+            "wrongChoices": ["7", "0", "12"]
+          },
+          {
+            "id": "T01-E01-Q08",
+            "displayQuestion": "7 + 9 = ___",
+            "apiExpression": "7+9",
+            "wrongChoices": ["18", "15", "17"]
+          },
+          {
+            "id": "T01-E01-Q09",
+            "displayQuestion": "12 + 6 = ___",
+            "apiExpression": "12+6",
+            "wrongChoices": ["8", "21", "16"]
+          },
+          {
+            "id": "T01-E01-Q10",
+            "displayQuestion": "10 + 6 = ___",
+            "apiExpression": "10+6",
+            "wrongChoices": ["12", "13", "15"]
+          }
+        ]
+      },
+      {
+        "id": "M01",
+        "difficulty": "sedang",
+        "questions": [
+          {
+            "id": "T01-M01-Q01",
+            "displayQuestion": "23 + 17 = ___",
+            "apiExpression": "23+17",
+            "wrongChoices": ["37", "40", "43"]
+          },
+          {
+            "id": "T01-M01-Q02",
+            "displayQuestion": "36 + 42 = ___",
+            "apiExpression": "36+42",
+            "wrongChoices": ["55", "68", "73"]
+          },
+          {
+            "id": "T01-M01-Q03",
+            "displayQuestion": "51 + 17 = ___",
+            "apiExpression": "51+17",
+            "wrongChoices": ["45", "66", "71"]
+          },
+          {
+            "id": "T01-M01-Q04",
+            "displayQuestion": "20 + 15 = ___",
+            "apiExpression": "20+15",
+            "wrongChoices": ["25", "45", "22"]
+          },
+          {
+            "id": "T01-M01-Q05",
+            "displayQuestion": "37 + 15 = ___",
+            "apiExpression": "37+15",
+            "wrongChoices": ["42", "29", "37"]
+          },
+          {
+            "id": "T01-M01-Q06",
+            "displayQuestion": "44 + 33 = ___",
+            "apiExpression": "44+33",
+            "wrongChoices": ["53", "66", "47"]
+          },
+          {
+            "id": "T01-M01-Q07",
+            "displayQuestion": "81 + 13 = ___",
+            "apiExpression": "81+13",
+            "wrongChoices": ["83", "91", "78"]
+          },
+          {
+            "id": "T01-M01-Q08",
+            "displayQuestion": "58 + 29 = ___",
+            "apiExpression": "58+29",
+            "wrongChoices": ["77", "83", "69"]
+          },
+          {
+            "id": "T01-M01-Q09",
+            "displayQuestion": "67 + 18 = ___",
+            "apiExpression": "67+18",
+            "wrongChoices": ["97", "75", "63"]
+          },
+          {
+            "id": "T01-M01-Q10",
+            "displayQuestion": "79 + 21 = ___",
+            "apiExpression": "79+21",
+            "wrongChoices": ["90", "80", "99"]
+          }
+        ]
+      },
+      {
+        "id": "H01",
+        "difficulty": "sulit",
+        "questions": [
+          {
+            "id": "T01-H01-Q01",
+            "displayQuestion": "103 + 125 = ___",
+            "apiExpression": "103+125",
+            "wrongChoices": ["219", "191", "227"]
+          },
+          {
+            "id": "T01-H01-Q02",
+            "displayQuestion": "214 + 187 = ___",
+            "apiExpression": "214+187",
+            "wrongChoices": ["387", "278", "395"]
+          },
+          {
+            "id": "T01-H01-Q03",
+            "displayQuestion": "321 + 149 = ___",
+            "apiExpression": "321+149",
+            "wrongChoices": ["564", "120", "580"]
+          },
+          {
+            "id": "T01-H01-Q04",
+            "displayQuestion": "450 + 320 = ___",
+            "apiExpression": "450+320",
+            "wrongChoices": ["760", "720", "750"]
+          },
+          {
+            "id": "T01-H01-Q05",
+            "displayQuestion": "198 + 202 = ___",
+            "apiExpression": "198+202",
+            "wrongChoices": ["200", "290", "149"]
+          },
+          {
+            "id": "T01-H01-Q06",
+            "displayQuestion": "111 + 89 = ___",
+            "apiExpression": "111+89",
+            "wrongChoices": ["190", "180", "170"]
+          },
+          {
+            "id": "T01-H01-Q07",
+            "displayQuestion": "132 + 158 = ___",
+            "apiExpression": "132+158",
+            "wrongChoices": ["280", "180", "190"]
+          },
+          {
+            "id": "T01-H01-Q08",
+            "displayQuestion": "263 + 142 = ___",
+            "apiExpression": "263+142",
+            "wrongChoices": ["305", "385", "475"]
+          },
+          {
+            "id": "T01-H01-Q09",
+            "displayQuestion": "189 + 250 = ___",
+            "apiExpression": "189+250",
+            "wrongChoices": ["189", "265", "339"]
+          },
+          {
+            "id": "T01-H01-Q10",
+            "displayQuestion": "218 + 109 = ___",
+            "apiExpression": "218+109",
+            "wrongChoices": ["235", "348", "227"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": "T02",
+    "title": "Pengurangan",
+    "icon": "icon_pengurangan",
+    "levels": [
+      {
+        "id": "E02",
+        "difficulty": "mudah",
+        "questions": [
+          {
+            "id": "T02-E02-Q01",
+            "displayQuestion": "9 - 3 = ___",
+            "apiExpression": "9-3",
+            "wrongChoices": ["8", "5", "7"]
+          },
+          {
+            "id": "T02-E02-Q02",
+            "displayQuestion": "14 - 7 = ___",
+            "apiExpression": "14-7",
+            "wrongChoices": ["14", "7", "12"]
+          },
+          {
+            "id": "T02-E02-Q03",
+            "displayQuestion": "10 - 5 = ___",
+            "apiExpression": "10-5",
+            "wrongChoices": ["10", "4", "6"]
+          },
+          {
+            "id": "T02-E02-Q04",
+            "displayQuestion": "12 - 6 = ___",
+            "apiExpression": "12-6",
+            "wrongChoices": ["8", "7", "14"]
+          },
+          {
+            "id": "T02-E02-Q05",
+            "displayQuestion": "8 - 9 = ___",
+            "apiExpression": "8-9",
+            "wrongChoices": ["9", "0", "2"]
+          },
+          {
+            "id": "T02-E02-Q06",
+            "displayQuestion": "9 - 4 = ___",
+            "apiExpression": "9-4",
+            "wrongChoices": ["8", "4", "1"]
+          },
+          {
+            "id": "T02-E02-Q07",
+            "displayQuestion": "15 - 8 = ___",
+            "apiExpression": "15-8",
+            "wrongChoices": ["9", "0", "6"]
+          },
+          {
+            "id": "T02-E02-Q08",
+            "displayQuestion": "11 - 9 = ___",
+            "apiExpression": "11-9",
+            "wrongChoices": ["1", "3", "4"]
+          },
+          {
+            "id": "T02-E02-Q09",
+            "displayQuestion": "7 - 4 = ___",
+            "apiExpression": "7-4",
+            "wrongChoices": ["4", "2", "5"]
+          },
+          {
+            "id": "T02-E02-Q10",
+            "displayQuestion": "13 - 8 = ___",
+            "apiExpression": "13-8",
+            "wrongChoices": ["9", "8", "6"]
+          }
+        ]
+      },
+      {
+        "id": "M02",
+        "difficulty": "sedang",
+        "questions": [
+          {
+            "id": "T02-M02-Q01",
+            "displayQuestion": "47 - 13 = ___",
+            "apiExpression": "47-13",
+            "wrongChoices": ["24", "36", "37"]
+          },
+          {
+            "id": "T02-M02-Q02",
+            "displayQuestion": "62 - 28 = ___",
+            "apiExpression": "62-28",
+            "wrongChoices": ["44", "38", "36"]
+          },
+          {
+            "id": "T02-M02-Q03",
+            "displayQuestion": "75 - 43 = ___",
+            "apiExpression": "75-43",
+            "wrongChoices": ["62", "52", "22"]
+          },
+          {
+            "id": "T02-M02-Q04",
+            "displayQuestion": "84 - 39 = ___",
+            "apiExpression": "84-39",
+            "wrongChoices": ["74", "35", "44"]
+          },
+          {
+            "id": "T02-M02-Q05",
+            "displayQuestion": "64 - 21 = ___",
+            "apiExpression": "64-21",
+            "wrongChoices": ["42", "45", "33"]
+          },
+          {
+            "id": "T02-M02-Q06",
+            "displayQuestion": "50 - 27 = ___",
+            "apiExpression": "50-27",
+            "wrongChoices": ["33", "24", "27"]
+          },
+          {
+            "id": "T02-M02-Q07",
+            "displayQuestion": "88 - 36 = ___",
+            "apiExpression": "88-36",
+            "wrongChoices": ["42", "43", "54"]
+          },
+          {
+            "id": "T02-M02-Q08",
+            "displayQuestion": "91 - 53 = ___",
+            "apiExpression": "91-53",
+            "wrongChoices": ["58", "47", "49"]
+          },
+          {
+            "id": "T02-M02-Q09",
+            "displayQuestion": "79 - 45 = ___",
+            "apiExpression": "79-45",
+            "wrongChoices": ["36", "37", "35"]
+          },
+          {
+            "id": "T02-M02-Q10",
+            "displayQuestion": "66 - 33 = ___",
+            "apiExpression": "66-33",
+            "wrongChoices": ["99", "23", "66"]
+          }
+        ]
+      },
+      {
+        "id": "H02",
+        "difficulty": "sulit",
+        "questions": [
+          {
+            "id": "T02-H02-Q01",
+            "displayQuestion": "314 - 109 = ___",
+            "apiExpression": "314-109",
+            "wrongChoices": ["203", "209", "214"]
+          },
+          {
+            "id": "T02-H02-Q02",
+            "displayQuestion": "400 - 287 = ___",
+            "apiExpression": "400-287",
+            "wrongChoices": ["213", "178", "130"]
+          },
+          {
+            "id": "T02-H02-Q03",
+            "displayQuestion": "560 - 143 = ___",
+            "apiExpression": "560-143",
+            "wrongChoices": ["560", "142", "433"]
+          },
+          {
+            "id": "T02-H02-Q04",
+            "displayQuestion": "625 - 312 = ___",
+            "apiExpression": "625-312",
+            "wrongChoices": ["325", "212", "215"]
+          },
+          {
+            "id": "T02-H02-Q05",
+            "displayQuestion": "710 - 418 = ___",
+            "apiExpression": "710-418",
+            "wrongChoices": ["200", "382", "378"]
+          },
+          {
+            "id": "T02-H02-Q06",
+            "displayQuestion": "325 - 117 = ___",
+            "apiExpression": "325-117",
+            "wrongChoices": ["209", "215", "217"]
+          },
+          {
+            "id": "T02-H02-Q07",
+            "displayQuestion": "990 - 478 = ___",
+            "apiExpression": "990-478",
+            "wrongChoices": ["337", "517", "522"]
+          },
+          {
+            "id": "T02-H02-Q08",
+            "displayQuestion": "800 - 299 = ___",
+            "apiExpression": "800-299",
+            "wrongChoices": ["700", "701", "602"]
+          },
+          {
+            "id": "T02-H02-Q09",
+            "displayQuestion": "425 - 120 = ___",
+            "apiExpression": "425-120",
+            "wrongChoices": ["275", "265", "335"]
+          },
+          {
+            "id": "T02-H02-Q10",
+            "displayQuestion": "999 - 666 = ___",
+            "apiExpression": "999+666",
+            "wrongChoices": ["966", "339", "336"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": "T03",
+    "title": "Perkalian",
+    "icon": "icon_perkalian",
+    "levels": [
+      {
+        "id": "E03",
+        "difficulty": "mudah",
+        "questions": [
+          {
+            "id": "T03-E03-Q01",
+            "displayQuestion": "2 x 3 = ___",
+            "apiExpression": "2x3",
+            "wrongChoices": ["8", "5", "7"]
+          },
+          {
+            "id": "T03-E03-Q02",
+            "displayQuestion": "5 x 4 = ___",
+            "apiExpression": "5-4",
+            "wrongChoices": ["14", "7", "12"]
+          },
+          {
+            "id": "T03-E03-Q03",
+            "displayQuestion": "1 x 6 = ___",
+            "apiExpression": "1x6",
+            "wrongChoices": ["10", "4", "7"]
+          },
+          {
+            "id": "T03-E03-Q04",
+            "displayQuestion": "3 x 3 = ___",
+            "apiExpression": "3x3",
+            "wrongChoices": ["8", "7", "14"]
+          },
+          {
+            "id": "T03-E03-Q05",
+            "displayQuestion": "4 x 2 = ___",
+            "apiExpression": "4x2",
+            "wrongChoices": ["9", "0", "2"]
+          },
+          {
+            "id": "T03-E03-Q06",
+            "displayQuestion": "7 x 1 = ___",
+            "apiExpression": "7x1",
+            "wrongChoices": ["8", "4", "1"]
+          },
+          {
+            "id": "T03-E03-Q07",
+            "displayQuestion": "6 x 2 = ___",
+            "apiExpression": "6x2",
+            "wrongChoices": ["9", "8", "6"]
+          },
+          {
+            "id": "T03-E03-Q08",
+            "displayQuestion": "8 x 0 = ___",
+            "apiExpression": "8x0",
+            "wrongChoices": ["1", "8", "4"]
+          },
+          {
+            "id": "T03-E03-Q09",
+            "displayQuestion": "9 x 1 = ___",
+            "apiExpression": "9x1",
+            "wrongChoices": ["4", "8", "5"]
+          },
+          {
+            "id": "T03-E03-Q10",
+            "displayQuestion": "10 x 2 = ___",
+            "apiExpression": "10x2",
+            "wrongChoices": ["9", "8", "12"]
+          }
+        ]
+      },
+      {
+        "id": "M03",
+        "difficulty": "sedang",
+        "questions": [
+          {
+            "id": "T03-M03-Q01",
+            "displayQuestion": "12 x 3 = ___",
+            "apiExpression": "12x3",
+            "wrongChoices": ["24", "15", "37"]
+          },
+          {
+            "id": "T03-M03-Q02",
+            "displayQuestion": "14 x 5 = ___",
+            "apiExpression": "14x5",
+            "wrongChoices": ["44", "38", "36"]
+          },
+          {
+            "id": "T03-M03-Q03",
+            "displayQuestion": "17 x 2 = ___",
+            "apiExpression": "17x2",
+            "wrongChoices": ["62", "52", "22"]
+          },
+          {
+            "id": "T03-M03-Q04",
+            "displayQuestion": "11 x 4 = ___",
+            "apiExpression": "11x4",
+            "wrongChoices": ["74", "35", "44"]
+          },
+          {
+            "id": "T03-M03-Q05",
+            "displayQuestion": "16 x 6 = ___",
+            "apiExpression": "16x6",
+            "wrongChoices": ["42", "45", "33"]
+          },
+          {
+            "id": "T03-M03-Q06",
+            "displayQuestion": "15 x 7 = ___",
+            "apiExpression": "15x7",
+            "wrongChoices": ["33", "24", "27"]
+          },
+          {
+            "id": "T03-M03-Q07",
+            "displayQuestion": "13 x 8 = ___",
+            "apiExpression": "13x8",
+            "wrongChoices": ["42", "43", "54"]
+          },
+          {
+            "id": "T03-M03-Q08",
+            "displayQuestion": "19 x 3 = ___",
+            "apiExpression": "19x3",
+            "wrongChoices": ["58", "47", "49"]
+          },
+          {
+            "id": "T03-M03-Q09",
+            "displayQuestion": "20 x 4 = ___",
+            "apiExpression": "20x4",
+            "wrongChoices": ["36", "24", "35"]
+          },
+          {
+            "id": "T03-M03-Q10",
+            "displayQuestion": "18 x 5 = ___",
+            "apiExpression": "18x5",
+            "wrongChoices": ["99", "23", "66"]
+          }
+        ]
+      },
+      {
+        "id": "H03",
+        "difficulty": "sulit",
+        "questions": [
+          {
+            "id": "T03-H03-Q01",
+            "displayQuestion": "12 x 12 = ___",
+            "apiExpression": "12x12",
+            "wrongChoices": ["203", "209", "214"]
+          },
+          {
+            "id": "T03-H03-Q02",
+            "displayQuestion": "15 x 11 = ___",
+            "apiExpression": "15x11",
+            "wrongChoices": ["213", "178", "130"]
+          },
+          {
+            "id": "T03-H03-Q03",
+            "displayQuestion": "13 x 14 = ___",
+            "apiExpression": "13x14",
+            "wrongChoices": ["560", "142", "433"]
+          },
+          {
+            "id": "T03-H03-Q04",
+            "displayQuestion": "16 x 12 = ___",
+            "apiExpression": "16x12",
+            "wrongChoices": ["325", "212", "215"]
+          },
+          {
+            "id": "T03-H03-Q05",
+            "displayQuestion": "17 x 15 = ___",
+            "apiExpression": "17x15",
+            "wrongChoices": ["200", "382", "378"]
+          },
+          {
+            "id": "T03-H03-Q06",
+            "displayQuestion": "14 x 13 = ___",
+            "apiExpression": "14x13",
+            "wrongChoices": ["209", "215", "217"]
+          },
+          {
+            "id": "T03-H03-Q07",
+            "displayQuestion": "19 x 11 = ___",
+            "apiExpression": "19x11",
+            "wrongChoices": ["337", "217", "222"]
+          },
+          {
+            "id": "T03-H03-Q08",
+            "displayQuestion": "18 x 16 = ___",
+            "apiExpression": "18x16",
+            "wrongChoices": ["300", "251", "602"]
+          },
+          {
+            "id": "T03-H03-Q09",
+            "displayQuestion": "20 x 12 = ___",
+            "apiExpression": "20x12",
+            "wrongChoices": ["275", "265", "335"]
+          },
+          {
+            "id": "T03-H03-Q10",
+            "displayQuestion": "25 x 15 = ___",
+            "apiExpression": "25x15",
+            "wrongChoices": ["966", "339", "336"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": "T04",
+    "title": "Pembagian",
+    "icon": "icon_pembagian",
+    "levels": [
+      {
+        "id": "E04",
+        "difficulty": "mudah",
+        "questions": [
+          {
+            "id": "T04-E04-Q01",
+            "displayQuestion": "6 ÷ 2 = ___",
+            "apiExpression": "6/2",
+            "wrongChoices": ["1", "2", "4"]
+          },
+          {
+            "id": "T04-E04-Q02",
+            "displayQuestion": "9 ÷ 3 = ___",
+            "apiExpression": "9/3",
+            "wrongChoices": ["1", "6", "2"]
+          },
+          {
+            "id": "T04-E04-Q03",
+            "displayQuestion": "8 ÷ 4 = ___",
+            "apiExpression": "8/4",
+            "wrongChoices": ["1", "3", "5"]
+          },
+          {
+            "id": "T04-E04-Q04",
+            "displayQuestion": "10 ÷ 5 = ___",
+            "apiExpression": "10/5",
+            "wrongChoices": ["1", "3", "6"]
+          },
+          {
+            "id": "T04-E04-Q05",
+            "displayQuestion": "12 ÷ 6 = ___",
+            "apiExpression": "12/6",
+            "wrongChoices": ["1", "3", "5"]
+          },
+          {
+            "id": "T04-E04-Q06",
+            "displayQuestion": "15 ÷ 3 = ___",
+            "apiExpression": "15/3",
+            "wrongChoices": ["4", "2", "6"]
+          },
+          {
+            "id": "T04-E04-Q07",
+            "displayQuestion": "14 ÷ 7 = ___",
+            "apiExpression": "14/7",
+            "wrongChoices": ["1", "4", "5"]
+          },
+          {
+            "id": "T04-E04-Q08",
+            "displayQuestion": "16 ÷ 4 = ___",
+            "apiExpression": "16/4",
+            "wrongChoices": ["3", "5", "2"]
+          },
+          {
+            "id": "T04-E04-Q09",
+            "displayQuestion": "18 ÷ 6 = ___",
+            "apiExpression": "18/6",
+            "wrongChoices": ["2", "5", "1"]
+          },
+          {
+            "id": "T04-E04-Q10",
+            "displayQuestion": "20 ÷ 10 = ___",
+            "apiExpression": "20/10",
+            "wrongChoices": ["1", "4", "5"]
+          }
+        ]
+      },
+      {
+        "id": "M04",
+        "difficulty": "sedang",
+        "questions": [
+          {
+            "id": "T04-M04-Q01",
+            "displayQuestion": "36 ÷ 6 = ___",
+            "apiExpression": "36/6",
+            "wrongChoices": ["5", "4", "8"]
+          },
+          {
+            "id": "T04-M04-Q02",
+            "displayQuestion": "45 ÷ 5 = ___",
+            "apiExpression": "45/5",
+            "wrongChoices": ["11", "8", "6"]
+          },
+          {
+            "id": "T04-M04-Q03",
+            "displayQuestion": "56 ÷ 7 = ___",
+            "apiExpression": "56/7",
+            "wrongChoices": ["6", "7", "5"]
+          },
+          {
+            "id": "T04-M04-Q04",
+            "displayQuestion": "63 ÷ 9 = ___",
+            "apiExpression": "63/9",
+            "wrongChoices": ["5", "8", "9"]
+          },
+          {
+            "id": "T04-M04-Q05",
+            "displayQuestion": "81 ÷ 9 = ___",
+            "apiExpression": "81/9",
+            "wrongChoices": ["7", "10", "11"]
+          },
+          {
+            "id": "T04-M04-Q06",
+            "displayQuestion": "72 ÷ 8 = ___",
+            "apiExpression": "72/8",
+            "wrongChoices": ["10", "7", "6"]
+          },
+          {
+            "id": "T04-M04-Q07",
+            "displayQuestion": "64 ÷ 4 = ___",
+            "apiExpression": "64/4",
+            "wrongChoices": ["10", "12", "18"]
+          },
+          {
+            "id": "T04-M04-Q08",
+            "displayQuestion": "90 ÷ 6 = ___",
+            "apiExpression": "90/6",
+            "wrongChoices": ["10", "12", "17"]
+          },
+          {
+            "id": "T04-M04-Q09",
+            "displayQuestion": "84 ÷ 7 = ___",
+            "apiExpression": "84/7",
+            "wrongChoices": ["10", "9", "14"]
+          },
+          {
+            "id": "T04-M04-Q10",
+            "displayQuestion": "99 ÷ 11 = ___",
+            "apiExpression": "99/11",
+            "wrongChoices": ["7", "10", "11"]
+          }
+        ]
+      },
+      {
+        "id": "H04",
+        "difficulty": "sulit",
+        "questions": [
+          {
+            "id": "T04-H04-Q01",
+            "displayQuestion": "144 ÷ 12 = ___",
+            "apiExpression": "144/12",
+            "wrongChoices": ["10", "11", "13"]
+          },
+          {
+            "id": "T04-H04-Q02",
+            "displayQuestion": "169 ÷ 13 = ___",
+            "apiExpression": "169/13",
+            "wrongChoices": ["11", "14", "15"]
+          },
+          {
+            "id": "T04-H04-Q03",
+            "displayQuestion": "225 ÷ 15 = ___",
+            "apiExpression": "225/15",
+            "wrongChoices": ["13", "12", "10"]
+          },
+          {
+            "id": "T04-H04-Q04",
+            "displayQuestion": "196 ÷ 14 = ___",
+            "apiExpression": "196/14",
+            "wrongChoices": ["12", "11", "15"]
+          },
+          {
+            "id": "T04-H04-Q05",
+            "displayQuestion": "256 ÷ 16 = ___",
+            "apiExpression": "256/16",
+            "wrongChoices": ["14", "17", "10"]
+          },
+          {
+            "id": "T04-H04-Q06",
+            "displayQuestion": "289 ÷ 17 = ___",
+            "apiExpression": "289/17",
+            "wrongChoices": ["15", "18", "20"]
+          },
+          {
+            "id": "T04-H04-Q07",
+            "displayQuestion": "324 ÷ 18 = ___",
+            "apiExpression": "324/18",
+            "wrongChoices": ["20", "15", "16"]
+          },
+          {
+            "id": "T04-H04-Q08",
+            "displayQuestion": "361 ÷ 19 = ___",
+            "apiExpression": "361/19",
+            "wrongChoices": ["17", "18", "16"]
+          },
+          {
+            "id": "T04-H04-Q09",
+            "displayQuestion": "400 ÷ 20 = ___",
+            "apiExpression": "400/20",
+            "wrongChoices": ["21", "18", "22"]
+          },
+          {
+            "id": "T04-H04-Q10",
+            "displayQuestion": "441 ÷ 21 = ___",
+            "apiExpression": "441/21",
+            "wrongChoices": ["22", "23", "25"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": "T05",
+    "title": "Akar Kuadrat & Eksponen",
+    "icon": "icon_akar_eksponen",
+    "levels": [
+      {
+        "id": "E05",
+        "difficulty": "mudah",
+        "questions": [
+          {
+            "id": "T05-E05-Q01",
+            "displayQuestion": "√25 = ___",
+            "apiExpression": "sqrt(25)",
+            "wrongChoices": ["4", "6", "3"]
+          },
+          {
+            "id": "T05-E05-Q02",
+            "displayQuestion": "2² = ___",
+            "apiExpression": "2^2",
+            "wrongChoices": ["2", "6", "8"]
+          },
+          {
+            "id": "T05-E05-Q03",
+            "displayQuestion": "√49 = ___",
+            "apiExpression": "sqrt(49)",
+            "wrongChoices": ["6", "8", "5"]
+          },
+          {
+            "id": "T05-E05-Q04",
+            "displayQuestion": "3² = ___",
+            "apiExpression": "3^2",
+            "wrongChoices": ["6", "7", "12"]
+          },
+          {
+            "id": "T05-E05-Q05",
+            "displayQuestion": "√36 = ___",
+            "apiExpression": "sqrt(36)",
+            "wrongChoices": ["5", "8", "4"]
+          },
+          {
+            "id": "T05-E05-Q06",
+            "displayQuestion": "4² = ___",
+            "apiExpression": "4^2",
+            "wrongChoices": ["12", "14", "10"]
+          },
+          {
+            "id": "T05-E05-Q07",
+            "displayQuestion": "√64 = ___",
+            "apiExpression": "sqrt(64)",
+            "wrongChoices": ["9", "6", "5"]
+          },
+          {
+            "id": "T05-E05-Q08",
+            "displayQuestion": "5² = ___",
+            "apiExpression": "5^2",
+            "wrongChoices": ["15", "20", "30"]
+          },
+          {
+            "id": "T05-E05-Q09",
+            "displayQuestion": "√81 = ___",
+            "apiExpression": "sqrt(81)",
+            "wrongChoices": ["8", "10", "6"]
+          },
+          {
+            "id": "T05-E05-Q10",
+            "displayQuestion": "6² = ___",
+            "apiExpression": "6^2",
+            "wrongChoices": ["36", "20", "30"]
+          }
+        ]
+      },
+      {
+        "id": "M05",
+        "difficulty": "sedang",
+        "questions": [
+          {
+            "id": "T05-M05-Q01",
+            "displayQuestion": "√121 = ___",
+            "apiExpression": "sqrt(121)",
+            "wrongChoices": ["10", "12", "14"]
+          },
+          {
+            "id": "T05-M05-Q02",
+            "displayQuestion": "7² = ___",
+            "apiExpression": "7^2",
+            "wrongChoices": ["48", "56", "63"]
+          },
+          {
+            "id": "T05-M05-Q03",
+            "displayQuestion": "√144 = ___",
+            "apiExpression": "sqrt(144)",
+            "wrongChoices": ["10", "11", "13"]
+          },
+          {
+            "id": "T05-M05-Q04",
+            "displayQuestion": "8² = ___",
+            "apiExpression": "8^2",
+            "wrongChoices": ["56", "62", "70"]
+          },
+          {
+            "id": "T05-M05-Q05",
+            "displayQuestion": "√100 = ___",
+            "apiExpression": "sqrt(100)",
+            "wrongChoices": ["11", "8", "12"]
+          },
+          {
+            "id": "T05-M05-Q06",
+            "displayQuestion": "9² = ___",
+            "apiExpression": "9^2",
+            "wrongChoices": ["70", "72", "85"]
+          },
+          {
+            "id": "T05-M05-Q07",
+            "displayQuestion": "√169 = ___",
+            "apiExpression": "sqrt(169)",
+            "wrongChoices": ["11", "14", "15"]
+          },
+          {
+            "id": "T05-M05-Q08",
+            "displayQuestion": "10² = ___",
+            "apiExpression": "10^2",
+            "wrongChoices": ["80", "90", "110"]
+          },
+          {
+            "id": "T05-M05-Q09",
+            "displayQuestion": "11² = ___",
+            "apiExpression": "11^2",
+            "wrongChoices": ["111", "100", "130"]
+          },
+          {
+            "id": "T05-M05-Q10",
+            "displayQuestion": "√196 = ___",
+            "apiExpression": "sqrt(196)",
+            "wrongChoices": ["13", "12", "15"]
+          }
+        ]
+      },
+      {
+        "id": "H05",
+        "difficulty": "sulit",
+        "questions": [
+          {
+            "id": "T05-H05-Q01",
+            "displayQuestion": "12² = ___",
+            "apiExpression": "12^2",
+            "wrongChoices": ["124", "130", "120"]
+          },
+          {
+            "id": "T05-H05-Q02",
+            "displayQuestion": "√225 = ___",
+            "apiExpression": "sqrt(225)",
+            "wrongChoices": ["14", "13", "12"]
+          },
+          {
+            "id": "T05-H05-Q03",
+            "displayQuestion": "13² = ___",
+            "apiExpression": "13^2",
+            "wrongChoices": ["159", "160", "155"]
+          },
+          {
+            "id": "T05-H05-Q04",
+            "displayQuestion": "√256 = ___",
+            "apiExpression": "sqrt(256)",
+            "wrongChoices": ["15", "14", "13"]
+          },
+          {
+            "id": "T05-H05-Q05",
+            "displayQuestion": "15² = ___",
+            "apiExpression": "15^2",
+            "wrongChoices": ["200", "210", "205"]
+          },
+          {
+            "id": "T05-H05-Q06",
+            "displayQuestion": "√289 = ___",
+            "apiExpression": "sqrt(289)",
+            "wrongChoices": ["15", "18", "16"]
+          },
+          {
+            "id": "T05-H05-Q07",
+            "displayQuestion": "17² = ___",
+            "apiExpression": "17^2",
+            "wrongChoices": ["279", "300", "270"]
+          },
+          {
+            "id": "T05-H05-Q08",
+            "displayQuestion": "√324 = ___",
+            "apiExpression": "sqrt(324)",
+            "wrongChoices": ["28", "20", "16"]
+          },
+          {
+            "id": "T05-H05-Q09",
+            "displayQuestion": "18² = ___",
+            "apiExpression": "18^2",
+            "wrongChoices": ["334", "330", "350"]
+          },
+          {
+            "id": "T05-H05-Q10",
+            "displayQuestion": "√361 = ___",
+            "apiExpression": "sqrt(361)",
+            "wrongChoices": ["17", "20", "16"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": "T06",
+    "title": "Operasi Campuran Sederhana",
+    "icon": "icon_operasi_campuran",
+    "levels": [
+      {
+        "id": "E06",
+        "difficulty": "mudah",
+        "questions": [
+          {
+            "id": "T06-E06-Q01",
+            "displayQuestion": "2 + 3 × 4 = ___",
+            "apiExpression": "2 + 3 * 4",
+            "wrongChoices": ["20", "14", "18"]
+          },
+          {
+            "id": "T06-E06-Q02",
+            "displayQuestion": "5 × 2 + 1 = ___",
+            "apiExpression": "5 * 2 + 1",
+            "wrongChoices": ["12", "15", "20"]
+          },
+          {
+            "id": "T06-E06-Q03",
+            "displayQuestion": "10 - 2 × 3 = ___",
+            "apiExpression": "10 - 2 * 3",
+            "wrongChoices": ["4", "6", "10"]
+          },
+          {
+            "id": "T06-E06-Q04",
+            "displayQuestion": "6 + 8 ÷ 4 = ___",
+            "apiExpression": "6 + 8 / 4",
+            "wrongChoices": ["2", "4", "10"]
+          },
+          {
+            "id": "T06-E06-Q05",
+            "displayQuestion": "9 - 6 ÷ 3 = ___",
+            "apiExpression": "9 - 6 / 3",
+            "wrongChoices": ["3", "0", "5"]
+          },
+          {
+            "id": "T06-E06-Q06",
+            "displayQuestion": "4 + 6 × 2 = ___",
+            "apiExpression": "4 + 6 * 2",
+            "wrongChoices": ["20", "10", "8"]
+          },
+          {
+            "id": "T06-E06-Q07",
+            "displayQuestion": "8 ÷ 2 + 5 = ___",
+            "apiExpression": "8 / 2 + 5",
+            "wrongChoices": ["9", "7", "6"]
+          },
+          {
+            "id": "T06-E06-Q08",
+            "displayQuestion": "12 - 4 × 2 = ___",
+            "apiExpression": "12 - 4 * 2",
+            "wrongChoices": ["10", "4", "6"]
+          },
+          {
+            "id": "T06-E06-Q09",
+            "displayQuestion": "7 + 3 × 3 = ___",
+            "apiExpression": "7 + 3 * 3",
+            "wrongChoices": ["10", "15", "12"]
+          },
+          {
+            "id": "T06-E06-Q10",
+            "displayQuestion": "10 ÷ 2 + 1 = ___",
+            "apiExpression": "10 / 2 + 1",
+            "wrongChoices": ["4", "6", "10"]
+          }
+        ]
+      },
+      {
+        "id": "M06",
+        "difficulty": "sedang",
+        "questions": [
+          {
+            "id": "T06-M06-Q01",
+            "displayQuestion": "5 + 6 × 3 - 2 = ___",
+            "apiExpression": "5 + 6 * 3 - 2",
+            "wrongChoices": ["15", "20", "21"]
+          },
+          {
+            "id": "T06-M06-Q02",
+            "displayQuestion": "8 + 12 ÷ 4 × 2 = ___",
+            "apiExpression": "8 + 12 / 4 * 2",
+            "wrongChoices": ["10", "6", "14"]
+          },
+          {
+            "id": "T06-M06-Q03",
+            "displayQuestion": "18 - 4 + 2 × 3 = ___",
+            "apiExpression": "18 - 4 + 2 * 3",
+            "wrongChoices": ["12", "20", "14"]
+          },
+          {
+            "id": "T06-M06-Q04",
+            "displayQuestion": "6 × 3 - 5 + 4 = ___",
+            "apiExpression": "6 * 3 - 5 + 4",
+            "wrongChoices": ["17", "15", "10"]
+          },
+          {
+            "id": "T06-M06-Q05",
+            "displayQuestion": "14 + 6 ÷ 2 × 3 = ___",
+            "apiExpression": "14 + 6 / 2 * 3",
+            "wrongChoices": ["16", "24", "12"]
+          },
+          {
+            "id": "T06-M06-Q06",
+            "displayQuestion": "20 - 8 ÷ 2 + 1 = ___",
+            "apiExpression": "20 - 8 / 2 + 1",
+            "wrongChoices": ["15", "10", "20"]
+          },
+          {
+            "id": "T06-M06-Q07",
+            "displayQuestion": "9 + 3 × 4 - 6 = ___",
+            "apiExpression": "9 + 3 * 4 - 6",
+            "wrongChoices": ["12", "15", "18"]
+          },
+          {
+            "id": "T06-M06-Q08",
+            "displayQuestion": "16 ÷ 4 + 2 × 3 = ___",
+            "apiExpression": "16 / 4 + 2 * 3",
+            "wrongChoices": ["6", "8", "12"]
+          },
+          {
+            "id": "T06-M06-Q09",
+            "displayQuestion": "30 - 10 ÷ 5 × 2 = ___",
+            "apiExpression": "30 - 10 / 5 * 2",
+            "wrongChoices": ["20", "24", "30"]
+          },
+          {
+            "id": "T06-M06-Q10",
+            "displayQuestion": "7 + 2 × 5 - 3 = ___",
+            "apiExpression": "7 + 2 * 5 - 3",
+            "wrongChoices": ["12", "11", "17"]
+          }
+        ]
+      },
+      {
+        "id": "H06",
+        "difficulty": "sulit",
+        "questions": [
+          {
+            "id": "T06-H06-Q01",
+            "displayQuestion": "24 ÷ 4 × 3 + 6 - 2 = ___",
+            "apiExpression": "24 / 4 * 3 + 6 - 2",
+            "wrongChoices": ["14", "12", "18"]
+          },
+          {
+            "id": "T06-H06-Q02",
+            "displayQuestion": "5 + 3 × 2 - 8 ÷ 4 = ___",
+            "apiExpression": "5 + 3 * 2 - 8 / 4",
+            "wrongChoices": ["8", "6", "5"]
+          },
+          {
+            "id": "T06-H06-Q03",
+            "displayQuestion": "10 × 2 - 6 ÷ 3 + 1 = ___",
+            "apiExpression": "10 * 2 - 6 / 3 + 1",
+            "wrongChoices": ["15", "21", "19"]
+          },
+          {
+            "id": "T06-H06-Q04",
+            "displayQuestion": "18 ÷ 3 + 2 × 4 - 5 = ___",
+            "apiExpression": "18 / 3 + 2 * 4 - 5",
+            "wrongChoices": ["7", "9", "10"]
+          },
+          {
+            "id": "T06-H06-Q05",
+            "displayQuestion": "30 - 12 ÷ 3 × 2 + 5 = ___",
+            "apiExpression": "30 - 12 / 3 * 2 + 5",
+            "wrongChoices": ["25", "22", "15"]
+          },
+          {
+            "id": "T06-H06-Q06",
+            "displayQuestion": "40 ÷ 5 + 6 × 2 - 8 = ___",
+            "apiExpression": "40 / 5 + 6 * 2 - 8",
+            "wrongChoices": ["10", "15", "18"]
+          },
+          {
+            "id": "T06-H06-Q07",
+            "displayQuestion": "16 + 4 ÷ 2 × 3 - 1 = ___",
+            "apiExpression": "16 + 4 / 2 * 3 - 1",
+            "wrongChoices": ["19", "20", "16"]
+          },
+          {
+            "id": "T06-H06-Q08",
+            "displayQuestion": "8 × 2 + 10 ÷ 2 - 3 = ___",
+            "apiExpression": "8 * 2 + 10 / 2 - 3",
+            "wrongChoices": ["16", "15", "11"]
+          },
+          {
+            "id": "T06-H06-Q09",
+            "displayQuestion": "50 ÷ 5 + 6 × 2 - 4 = ___",
+            "apiExpression": "50 / 5 + 6 * 2 - 4",
+            "wrongChoices": ["18", "14", "10"]
+          },
+          {
+            "id": "T06-H06-Q10",
+            "displayQuestion": "25 + 10 ÷ 2 × 3 - 5 = ___",
+            "apiExpression": "25 + 10 / 2 * 3 - 5",
+            "wrongChoices": ["28", "35", "22"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": "T07",
+    "title": "Pecahan",
+    "icon": "icon_pecahan",
+    "levels": [
+      {
+        "id": "E07",
+        "difficulty": "mudah",
+        "questions": [
+          {
+            "id": "T07-E07-Q01",
+            "displayQuestion": "1/2 + 1/2 = ___",
+            "apiExpression": "1/2 + 1/2",
+            "wrongChoices": ["1/4", "1", "2/2"]
+          },
+          {
+            "id": "T07-E07-Q02",
+            "displayQuestion": "3/4 - 1/4 = ___",
+            "apiExpression": "3/4 - 1/4",
+            "wrongChoices": ["1/2", "2/3", "1/3"]
+          },
+          {
+            "id": "T07-E07-Q03",
+            "displayQuestion": "1/3 + 1/3 = ___",
+            "apiExpression": "1/3 + 1/3",
+            "wrongChoices": ["1/6", "1/2", "1/4"]
+          },
+          {
+            "id": "T07-E07-Q04",
+            "displayQuestion": "2/5 + 2/5 = ___",
+            "apiExpression": "2/5 + 2/5",
+            "wrongChoices": ["3/5", "4/10", "1/2"]
+          },
+          {
+            "id": "T07-E07-Q05",
+            "displayQuestion": "5/6 - 2/6 = ___",
+            "apiExpression": "5/6 - 2/6",
+            "wrongChoices": ["2/3", "1/6", "4/6"]
+          },
+          {
+            "id": "T07-E07-Q06",
+            "displayQuestion": "2/4 + 1/4 = ___",
+            "apiExpression": "2/4 + 1/4",
+            "wrongChoices": ["1/4", "3/8", "1/2"]
+          },
+          {
+            "id": "T07-E07-Q07",
+            "displayQuestion": "3/5 - 2/5 = ___",
+            "apiExpression": "3/5 - 2/5",
+            "wrongChoices": ["1/3", "2/10", "2/3"]
+          },
+          {
+            "id": "T07-E07-Q08",
+            "displayQuestion": "4/4 - 1/4 = ___",
+            "apiExpression": "4/4 - 1/4",
+            "wrongChoices": ["1/2", "2/4", "1/1"]
+          },
+          {
+            "id": "T07-E07-Q09",
+            "displayQuestion": "2/3 - 1/3 = ___",
+            "apiExpression": "2/3 - 1/3",
+            "wrongChoices": ["2/6", "1/2", "1/6"]
+          },
+          {
+            "id": "T07-E07-Q10",
+            "displayQuestion": "1/4 + 2/4 = ___",
+            "apiExpression": "1/4 + 2/4",
+            "wrongChoices": ["1/2", "4/4", "1/5"]
+          }
+        ]
+      },
+      {
+        "id": "M07",
+        "difficulty": "sedang",
+        "questions": [
+          {
+            "id": "T07-M07-Q01",
+            "displayQuestion": "3/4 + 2/3 = ___",
+            "apiExpression": "3/4 + 2/3",
+            "wrongChoices": ["5/7", "1", "9/12"]
+          },
+          {
+            "id": "T07-M07-Q02",
+            "displayQuestion": "7/8 - 1/3 = ___",
+            "apiExpression": "7/8 - 1/3",
+            "wrongChoices": ["6/5", "5/8", "1/2"]
+          },
+          {
+            "id": "T07-M07-Q03",
+            "displayQuestion": "5/6 + 1/2 = ___",
+            "apiExpression": "5/6 + 1/2",
+            "wrongChoices": ["1", "2/3", "7/12"]
+          },
+          {
+            "id": "T07-M07-Q04",
+            "displayQuestion": "9/10 - 2/5 = ___",
+            "apiExpression": "9/10 - 2/5",
+            "wrongChoices": ["1/2", "5/10", "6/15"]
+          },
+          {
+            "id": "T07-M07-Q05",
+            "displayQuestion": "3/8 + 5/6 = ___",
+            "apiExpression": "3/8 + 5/6",
+            "wrongChoices": ["8/14", "2/3", "13/24"]
+          },
+          {
+            "id": "T07-M07-Q06",
+            "displayQuestion": "7/10 + 3/5 = ___",
+            "apiExpression": "7/10 + 3/5",
+            "wrongChoices": ["1", "5/10", "9/15"]
+          },
+          {
+            "id": "T07-M07-Q07",
+            "displayQuestion": "4/5 - 1/2 = ___",
+            "apiExpression": "4/5 - 1/2",
+            "wrongChoices": ["3/5", "1/3", "2/5"]
+          },
+          {
+            "id": "T07-M07-Q08",
+            "displayQuestion": "2/3 + 4/5 = ___",
+            "apiExpression": "2/3 + 4/5",
+            "wrongChoices": ["6/8", "9/10", "1"]
+          },
+          {
+            "id": "T07-M07-Q09",
+            "displayQuestion": "6/7 - 1/4 = ___",
+            "apiExpression": "6/7 - 1/4",
+            "wrongChoices": ["5/7", "3/4", "2/7"]
+          },
+          {
+            "id": "T07-M07-Q10",
+            "displayQuestion": "3/5 + 2/7 = ___",
+            "apiExpression": "3/5 + 2/7",
+            "wrongChoices": ["5/10", "9/14", "11/35"]
+          }
+        ]
+      },
+      {
+        "id": "H07",
+        "difficulty": "sulit",
+        "questions": [
+          {
+            "id": "T07-H07-Q01",
+            "displayQuestion": "7/9 + 5/8 = ___",
+            "apiExpression": "7/9 + 5/8",
+            "wrongChoices": ["12/17", "13/18", "3/2"]
+          },
+          {
+            "id": "T07-H07-Q02",
+            "displayQuestion": "11/12 - 5/6 = ___",
+            "apiExpression": "11/12 - 5/6",
+            "wrongChoices": ["1/3", "2/12", "7/12"]
+          },
+          {
+            "id": "T07-H07-Q03",
+            "displayQuestion": "13/15 + 7/10 = ___",
+            "apiExpression": "13/15 + 7/10",
+            "wrongChoices": ["1", "17/25", "18/30"]
+          },
+          {
+            "id": "T07-H07-Q04",
+            "displayQuestion": "9/11 - 4/9 = ___",
+            "apiExpression": "9/11 - 4/9",
+            "wrongChoices": ["5/20", "1/2", "7/10"]
+          },
+          {
+            "id": "T07-H07-Q05",
+            "displayQuestion": "15/16 + 3/8 = ___",
+            "apiExpression": "15/16 + 3/8",
+            "wrongChoices": ["18/24", "1", "19/16"]
+          },
+          {
+            "id": "T07-H07-Q06",
+            "displayQuestion": "17/18 - 5/12 = ___",
+            "apiExpression": "17/18 - 5/12",
+            "wrongChoices": ["12/30", "9/18", "2/3"]
+          },
+          {
+            "id": "T07-H07-Q07",
+            "displayQuestion": "7/10 + 9/14 = ___",
+            "apiExpression": "7/10 + 9/14",
+            "wrongChoices": ["16/20", "1", "14/24"]
+          },
+          {
+            "id": "T07-H07-Q08",
+            "displayQuestion": "13/20 - 7/15 = ___",
+            "apiExpression": "13/20 - 7/15",
+            "wrongChoices": ["6/35", "10/30", "1/2"]
+          },
+          {
+            "id": "T07-H07-Q09",
+            "displayQuestion": "11/12 + 7/8 = ___",
+            "apiExpression": "11/12 + 7/8",
+            "wrongChoices": ["18/20", "17/16", "15/12"]
+          },
+          {
+            "id": "T07-H07-Q10",
+            "displayQuestion": "9/10 - 5/12 = ___",
+            "apiExpression": "9/10 - 5/12",
+            "wrongChoices": ["1/5", "3/10", "7/15"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": "T08",
+    "title": "Persentase",
+    "icon": "icon_persentase",
+    "levels": [
+      {
+        "id": "E08",
+        "difficulty": "mudah",
+        "questions": [
+          {
+            "id": "T08-E08-Q01",
+            "displayQuestion": "25% dari 80 = ___",
+            "apiExpression": "25/100 * 80",
+            "wrongChoices": ["10", "30", "50"]
+          },
+          {
+            "id": "T08-E08-Q02",
+            "displayQuestion": "10% dari 50 = ___",
+            "apiExpression": "10/100 * 50",
+            "wrongChoices": ["10", "15", "0.1"]
+          },
+          {
+            "id": "T08-E08-Q03",
+            "displayQuestion": "50% dari 100 = ___",
+            "apiExpression": "50/100 * 100",
+            "wrongChoices": ["25", "75", "150"]
+          },
+          {
+            "id": "T08-E08-Q04",
+            "displayQuestion": "20% dari 200 = ___",
+            "apiExpression": "20/100 * 200",
+            "wrongChoices": ["30", "60", "80"]
+          },
+          {
+            "id": "T08-E08-Q05",
+            "displayQuestion": "30% dari 90 = ___",
+            "apiExpression": "30/100 * 90",
+            "wrongChoices": ["20", "35", "50"]
+          },
+          {
+            "id": "T08-E08-Q06",
+            "displayQuestion": "75% dari 40 = ___",
+            "apiExpression": "75/100 * 40",
+            "wrongChoices": ["20", "25", "45"]
+          },
+          {
+            "id": "T08-E08-Q07",
+            "displayQuestion": "5% dari 60 = ___",
+            "apiExpression": "5/100 * 60",
+            "wrongChoices": ["2", "10", "6"]
+          },
+          {
+            "id": "T08-E08-Q08",
+            "displayQuestion": "90% dari 30 = ___",
+            "apiExpression": "90/100 * 30",
+            "wrongChoices": ["20", "27", "18"]
+          },
+          {
+            "id": "T08-E08-Q09",
+            "displayQuestion": "40% dari 120 = ___",
+            "apiExpression": "40/100 * 120",
+            "wrongChoices": ["48", "60", "30"]
+          },
+          {
+            "id": "T08-E08-Q10",
+            "displayQuestion": "15% dari 100 = ___",
+            "apiExpression": "15/100 * 100",
+            "wrongChoices": ["20", "10", "25"]
+          }
+        ]
+      },
+      {
+        "id": "M08",
+        "difficulty": "sedang",
+        "questions": [
+          {
+            "id": "T08-M08-Q01",
+            "displayQuestion": "65% dari 240 = ___",
+            "apiExpression": "65/100 * 240",
+            "wrongChoices": ["140", "170", "130"]
+          },
+          {
+            "id": "T08-M08-Q02",
+            "displayQuestion": "80% dari 150 = ___",
+            "apiExpression": "80/100 * 150",
+            "wrongChoices": ["110", "90", "130"]
+          },
+          {
+            "id": "T08-M08-Q03",
+            "displayQuestion": "35% dari 400 = ___",
+            "apiExpression": "35/100 * 400",
+            "wrongChoices": ["100", "180", "140"]
+          },
+          {
+            "id": "T08-M08-Q04",
+            "displayQuestion": "90% dari 250 = ___",
+            "apiExpression": "90/100 * 250",
+            "wrongChoices": ["220", "200", "300"]
+          },
+          {
+            "id": "T08-M08-Q05",
+            "displayQuestion": "60% dari 180 = ___",
+            "apiExpression": "60/100 * 180",
+            "wrongChoices": ["110", "100", "130"]
+          },
+          {
+            "id": "T08-M08-Q06",
+            "displayQuestion": "45% dari 500 = ___",
+            "apiExpression": "45/100 * 500",
+            "wrongChoices": ["200", "300", "250"]
+          },
+          {
+            "id": "T08-M08-Q07",
+            "displayQuestion": "55% dari 220 = ___",
+            "apiExpression": "55/100 * 220",
+            "wrongChoices": ["100", "110", "130"]
+          },
+          {
+            "id": "T08-M08-Q08",
+            "displayQuestion": "25% dari 360 = ___",
+            "apiExpression": "25/100 * 360",
+            "wrongChoices": ["80", "60", "120"]
+          },
+          {
+            "id": "T08-M08-Q09",
+            "displayQuestion": "70% dari 310 = ___",
+            "apiExpression": "70/100 * 310",
+            "wrongChoices": ["200", "250", "260"]
+          },
+          {
+            "id": "T08-M08-Q10",
+            "displayQuestion": "85% dari 420 = ___",
+            "apiExpression": "85/100 * 420",
+            "wrongChoices": ["350", "300", "360"]
+          }
+        ]
+      },
+      {
+        "id": "H08",
+        "difficulty": "sulit",
+        "questions": [
+          {
+            "id": "T08-H08-Q01",
+            "displayQuestion": "12.5% dari 64 = ___",
+            "apiExpression": "12.5/100 * 64",
+            "wrongChoices": ["6", "10", "12"]
+          },
+          {
+            "id": "T08-H08-Q02",
+            "displayQuestion": "62.5% dari 96 = ___",
+            "apiExpression": "62.5/100 * 96",
+            "wrongChoices": ["50", "55", "65"]
+          },
+          {
+            "id": "T08-H08-Q03",
+            "displayQuestion": "75% dari 240 = ___",
+            "apiExpression": "75/100 * 240",
+            "wrongChoices": ["160", "150", "190"]
+          },
+          {
+            "id": "T08-H08-Q04",
+            "displayQuestion": "37.5% dari 240 = ___",
+            "apiExpression": "37.5/100 * 240",
+            "wrongChoices": ["85", "90", "70"]
+          },
+          {
+            "id": "T08-H08-Q05",
+            "displayQuestion": "87.5% dari 160 = ___",
+            "apiExpression": "87.5/100 * 160",
+            "wrongChoices": ["130", "135", "120"]
+          },
+          {
+            "id": "T08-H08-Q06",
+            "displayQuestion": "66.6% dari 150 ≈ ___",
+            "apiExpression": "66.6/100 * 150",
+            "wrongChoices": ["80", "120", "85"]
+          },
+          {
+            "id": "T08-H08-Q07",
+            "displayQuestion": "33.3% dari 180 ≈ ___",
+            "apiExpression": "33.3/100 * 180",
+            "wrongChoices": ["50", "70", "80"]
+          },
+          {
+            "id": "T08-H08-Q08",
+            "displayQuestion": "62.5% dari 320 = ___",
+            "apiExpression": "62.5/100 * 320",
+            "wrongChoices": ["200", "180", "210"]
+          },
+          {
+            "id": "T08-H08-Q09",
+            "displayQuestion": "12.5% dari 96 = ___",
+            "apiExpression": "12.5/100 * 96",
+            "wrongChoices": ["10", "14", "11"]
+          },
+          {
+            "id": "T08-H08-Q10",
+            "displayQuestion": "25% dari 444 = ___",
+            "apiExpression": "25/100 * 444",
+            "wrongChoices": ["100", "120", "150"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": "T09",
+    "title": "Perbandingan Sederhana",
+    "icon": "icon_perbandingan",
+    "levels": [
+      {
+        "id": "E09",
+        "difficulty": "mudah",
+        "questions": [
+          {
+            "id": "T09-E09-Q01",
+            "displayQuestion": "2 : 3 = 4 : x, maka x = ___",
+            "apiExpression": "3 * 4 / 2",
+            "wrongChoices": ["5", "4", "3"]
+          },
+          {
+            "id": "T09-E09-Q02",
+            "displayQuestion": "3 : 5 = 6 : x, maka x = ___",
+            "apiExpression": "5 * 6 / 3",
+            "wrongChoices": ["8", "9", "6"]
+          },
+          {
+            "id": "T09-E09-Q03",
+            "displayQuestion": "4 : 2 = 10 : x, maka x = ___",
+            "apiExpression": "2 * 10 / 4",
+            "wrongChoices": ["3", "6", "4"]
+          },
+          {
+            "id": "T09-E09-Q04",
+            "displayQuestion": "5 : 2 = 15 : x, maka x = ___",
+            "apiExpression": "2 * 15 / 5",
+            "wrongChoices": ["8", "4", "10"]
+          },
+          {
+            "id": "T09-E09-Q05",
+            "displayQuestion": "6 : 3 = 12 : x, maka x = ___",
+            "apiExpression": "3 * 12 / 6",
+            "wrongChoices": ["5", "8", "4"]
+          },
+          {
+            "id": "T09-E09-Q06",
+            "displayQuestion": "1 : 4 = 3 : x, maka x = ___",
+            "apiExpression": "4 * 3 / 1",
+            "wrongChoices": ["5", "6", "8"]
+          },
+          {
+            "id": "T09-E09-Q07",
+            "displayQuestion": "2 : 5 = 6 : x, maka x = ___",
+            "apiExpression": "5 * 6 / 2",
+            "wrongChoices": ["12", "10", "8"]
+          },
+          {
+            "id": "T09-E09-Q08",
+            "displayQuestion": "7 : 2 = 14 : x, maka x = ___",
+            "apiExpression": "2 * 14 / 7",
+            "wrongChoices": ["3", "4", "6"]
+          },
+          {
+            "id": "T09-E09-Q09",
+            "displayQuestion": "9 : 3 = 18 : x, maka x = ___",
+            "apiExpression": "3 * 18 / 9",
+            "wrongChoices": ["4", "5", "7"]
+          },
+          {
+            "id": "T09-E09-Q10",
+            "displayQuestion": "5 : 1 = 10 : x, maka x = ___",
+            "apiExpression": "1 * 10 / 5",
+            "wrongChoices": ["3", "4", "1"]
+          }
+        ]
+      },
+      {
+        "id": "M09",
+        "difficulty": "sedang",
+        "questions": [
+          {
+            "id": "T09-M09-Q01",
+            "displayQuestion": "6 : 7 = 24 : x, maka x = ___",
+            "apiExpression": "7 * 24 / 6",
+            "wrongChoices": ["30", "25", "26"]
+          },
+          {
+            "id": "T09-M09-Q02",
+            "displayQuestion": "4 : 9 = 16 : x, maka x = ___",
+            "apiExpression": "9 * 16 / 4",
+            "wrongChoices": ["34", "38", "30"]
+          },
+          {
+            "id": "T09-M09-Q03",
+            "displayQuestion": "5 : 6 = 20 : x, maka x = ___",
+            "apiExpression": "6 * 20 / 5",
+            "wrongChoices": ["18", "24", "26"]
+          },
+          {
+            "id": "T09-M09-Q04",
+            "displayQuestion": "3 : 8 = 15 : x, maka x = ___",
+            "apiExpression": "8 * 15 / 3",
+            "wrongChoices": ["40", "36", "32"]
+          },
+          {
+            "id": "T09-M09-Q05",
+            "displayQuestion": "7 : 5 = 28 : x, maka x = ___",
+            "apiExpression": "5 * 28 / 7",
+            "wrongChoices": ["18", "20", "26"]
+          },
+          {
+            "id": "T09-M09-Q06",
+            "displayQuestion": "9 : 4 = 27 : x, maka x = ___",
+            "apiExpression": "4 * 27 / 9",
+            "wrongChoices": ["10", "12", "16"]
+          },
+          {
+            "id": "T09-M09-Q07",
+            "displayQuestion": "2 : 7 = 8 : x, maka x = ___",
+            "apiExpression": "7 * 8 / 2",
+            "wrongChoices": ["26", "28", "24"]
+          },
+          {
+            "id": "T09-M09-Q08",
+            "displayQuestion": "11 : 3 = 33 : x, maka x = ___",
+            "apiExpression": "3 * 33 / 11",
+            "wrongChoices": ["7", "9", "11"]
+          },
+          {
+            "id": "T09-M09-Q09",
+            "displayQuestion": "8 : 6 = 32 : x, maka x = ___",
+            "apiExpression": "6 * 32 / 8",
+            "wrongChoices": ["20", "28", "22"]
+          },
+          {
+            "id": "T09-M09-Q10",
+            "displayQuestion": "13 : 2 = 52 : x, maka x = ___",
+            "apiExpression": "2 * 52 / 13",
+            "wrongChoices": ["6", "10", "8"]
+          }
+        ]
+      },
+      {
+        "id": "H09",
+        "difficulty": "sulit",
+        "questions": [
+          {
+            "id": "T09-H09-Q01",
+            "displayQuestion": "4.5 : 3 = 18 : x, maka x = ___",
+            "apiExpression": "3 * 18 / 4.5",
+            "wrongChoices": ["10", "11", "6"]
+          },
+          {
+            "id": "T09-H09-Q02",
+            "displayQuestion": "6.25 : 5 = 25 : x, maka x = ___",
+            "apiExpression": "5 * 25 / 6.25",
+            "wrongChoices": ["18", "22", "20"]
+          },
+          {
+            "id": "T09-H09-Q03",
+            "displayQuestion": "7.5 : 2.5 = 15 : x, maka x = ___",
+            "apiExpression": "2.5 * 15 / 7.5",
+            "wrongChoices": ["4", "6", "2"]
+          },
+          {
+            "id": "T09-H09-Q04",
+            "displayQuestion": "3.5 : 2 = 14 : x, maka x = ___",
+            "apiExpression": "2 * 14 / 3.5",
+            "wrongChoices": ["6", "8", "10"]
+          },
+          {
+            "id": "T09-H09-Q05",
+            "displayQuestion": "12.5 : 4 = 50 : x, maka x = ___",
+            "apiExpression": "4 * 50 / 12.5",
+            "wrongChoices": ["10", "14", "18"]
+          },
+          {
+            "id": "T09-H09-Q06",
+            "displayQuestion": "5.5 : 11 = x : 22, maka x = ___",
+            "apiExpression": "5.5 * 22 / 11",
+            "wrongChoices": ["12", "10", "8"]
+          },
+          {
+            "id": "T09-H09-Q07",
+            "displayQuestion": "9 : 3.6 = x : 7.2, maka x = ___",
+            "apiExpression": "9 * 7.2 / 3.6",
+            "wrongChoices": ["16", "20", "18"]
+          },
+          {
+            "id": "T09-H09-Q08",
+            "displayQuestion": "6 : 2 = x : 1.5, maka x = ___",
+            "apiExpression": "6 * 1.5 / 2",
+            "wrongChoices": ["3", "5", "4"]
+          },
+          {
+            "id": "T09-H09-Q09",
+            "displayQuestion": "2.5 : 1.25 = 10 : x, maka x = ___",
+            "apiExpression": "1.25 * 10 / 2.5",
+            "wrongChoices": ["3", "6", "4"]
+          },
+          {
+            "id": "T09-H09-Q10",
+            "displayQuestion": "7 : 2 = 28 : x, maka x = ___",
+            "apiExpression": "2 * 28 / 7",
+            "wrongChoices": ["5", "10", "6"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": "T10",
+    "title": "Persamaan Linear Satu Variabel",
+    "icon": "icon_linear_equation",
+    "levels": [
+      {
+        "id": "E10",
+        "difficulty": "mudah",
+        "questions": [
+          {
+            "id": "T10-E10-Q01",
+            "displayQuestion": "2x + 3 = 11, maka x = ___",
+            "apiExpression": "(11 - 3) / 2",
+            "wrongChoices": ["6", "3", "2"]
+          },
+          {
+            "id": "T10-E10-Q02",
+            "displayQuestion": "3x = 12, maka x = ___",
+            "apiExpression": "12 / 3",
+            "wrongChoices": ["2", "6", "9"]
+          },
+          {
+            "id": "T10-E10-Q03",
+            "displayQuestion": "x + 5 = 10, maka x = ___",
+            "apiExpression": "10 - 5",
+            "wrongChoices": ["4", "8", "10"]
+          },
+          {
+            "id": "T10-E10-Q04",
+            "displayQuestion": "5x = 25, maka x = ___",
+            "apiExpression": "25 / 5",
+            "wrongChoices": ["10", "15", "20"]
+          },
+          {
+            "id": "T10-E10-Q05",
+            "displayQuestion": "x - 4 = 6, maka x = ___",
+            "apiExpression": "6 + 4",
+            "wrongChoices": ["8", "10", "6"]
+          },
+          {
+            "id": "T10-E10-Q06",
+            "displayQuestion": "4x = 20, maka x = ___",
+            "apiExpression": "20 / 4",
+            "wrongChoices": ["6", "8", "10"]
+          },
+          {
+            "id": "T10-E10-Q07",
+            "displayQuestion": "x / 2 = 7, maka x = ___",
+            "apiExpression": "7 * 2",
+            "wrongChoices": ["10", "12", "16"]
+          },
+          {
+            "id": "T10-E10-Q08",
+            "displayQuestion": "x + 6 = 15, maka x = ___",
+            "apiExpression": "15 - 6",
+            "wrongChoices": ["10", "7", "12"]
+          },
+          {
+            "id": "T10-E10-Q09",
+            "displayQuestion": "x - 9 = 3, maka x = ___",
+            "apiExpression": "3 + 9",
+            "wrongChoices": ["12", "10", "8"]
+          },
+          {
+            "id": "T10-E10-Q10",
+            "displayQuestion": "6x = 18, maka x = ___",
+            "apiExpression": "18 / 6",
+            "wrongChoices": ["4", "6", "2"]
+          }
+        ]
+      },
+      {
+        "id": "M10",
+        "difficulty": "sedang",
+        "questions": [
+          {
+            "id": "T10-M10-Q01",
+            "displayQuestion": "3x - 4 = 11, maka x = ___",
+            "apiExpression": "(11 + 4) / 3",
+            "wrongChoices": ["6", "4", "3"]
+          },
+          {
+            "id": "T10-M10-Q02",
+            "displayQuestion": "5x + 2 = 27, maka x = ___",
+            "apiExpression": "(27 - 2) / 5",
+            "wrongChoices": ["6", "3", "8"]
+          },
+          {
+            "id": "T10-M10-Q03",
+            "displayQuestion": "2x - 6 = 8, maka x = ___",
+            "apiExpression": "(8 + 6) / 2",
+            "wrongChoices": ["5", "4", "6"]
+          },
+          {
+            "id": "T10-M10-Q04",
+            "displayQuestion": "4x + 3 = 31, maka x = ___",
+            "apiExpression": "(31 - 3) / 4",
+            "wrongChoices": ["5", "7", "9"]
+          },
+          {
+            "id": "T10-M10-Q05",
+            "displayQuestion": "x / 3 + 2 = 6, maka x = ___",
+            "apiExpression": "(6 - 2) * 3",
+            "wrongChoices": ["9", "6", "10"]
+          },
+          {
+            "id": "T10-M10-Q06",
+            "displayQuestion": "x / 5 - 1 = 3, maka x = ___",
+            "apiExpression": "(3 + 1) * 5",
+            "wrongChoices": ["15", "10", "25"]
+          },
+          {
+            "id": "T10-M10-Q07",
+            "displayQuestion": "6x + 2 = 20, maka x = ___",
+            "apiExpression": "(20 - 2) / 6",
+            "wrongChoices": ["4", "3", "5"]
+          },
+          {
+            "id": "T10-M10-Q08",
+            "displayQuestion": "x / 4 = 5, maka x = ___",
+            "apiExpression": "5 * 4",
+            "wrongChoices": ["16", "12", "18"]
+          },
+          {
+            "id": "T10-M10-Q09",
+            "displayQuestion": "2x + 5 = 13, maka x = ___",
+            "apiExpression": "(13 - 5) / 2",
+            "wrongChoices": ["6", "5", "2"]
+          },
+          {
+            "id": "T10-M10-Q10",
+            "displayQuestion": "3x + 4 = 22, maka x = ___",
+            "apiExpression": "(22 - 4) / 3",
+            "wrongChoices": ["4", "6", "8"]
+          }
+        ]
+      },
+      {
+        "id": "H10",
+        "difficulty": "sulit",
+        "questions": [
+          {
+            "id": "T10-H10-Q01",
+            "displayQuestion": "4x + 5 = 29, maka x = ___",
+            "apiExpression": "(29 - 5) / 4",
+            "wrongChoices": ["5", "6", "4"]
+          },
+          {
+            "id": "T10-H10-Q02",
+            "displayQuestion": "6x - 7 = 29, maka x = ___",
+            "apiExpression": "(29 + 7) / 6",
+            "wrongChoices": ["5", "6", "4"]
+          },
+          {
+            "id": "T10-H10-Q03",
+            "displayQuestion": "7x + 3 = 52, maka x = ___",
+            "apiExpression": "(52 - 3) / 7",
+            "wrongChoices": ["6", "5", "8"]
+          },
+          {
+            "id": "T10-H10-Q04",
+            "displayQuestion": "5x - 9 = 36, maka x = ___",
+            "apiExpression": "(36 + 9) / 5",
+            "wrongChoices": ["8", "7", "9"]
+          },
+          {
+            "id": "T10-H10-Q05",
+            "displayQuestion": "3x + 11 = 38, maka x = ___",
+            "apiExpression": "(38 - 11) / 3",
+            "wrongChoices": ["7", "8", "10"]
+          },
+          {
+            "id": "T10-H10-Q06",
+            "displayQuestion": "8x - 6 = 50, maka x = ___",
+            "apiExpression": "(50 + 6) / 8",
+            "wrongChoices": ["7", "8", "6"]
+          },
+          {
+            "id": "T10-H10-Q07",
+            "displayQuestion": "9x + 2 = 65, maka x = ___",
+            "apiExpression": "(65 - 2) / 9",
+            "wrongChoices": ["6", "8", "9"]
+          },
+          {
+            "id": "T10-H10-Q08",
+            "displayQuestion": "10x - 5 = 85, maka x = ___",
+            "apiExpression": "(85 + 5) / 10",
+            "wrongChoices": ["8", "7", "10"]
+          },
+          {
+            "id": "T10-H10-Q09",
+            "displayQuestion": "11x + 4 = 81, maka x = ___",
+            "apiExpression": "(81 - 4) / 11",
+            "wrongChoices": ["6", "7", "5"]
+          },
+          {
+            "id": "T10-H10-Q10",
+            "displayQuestion": "12x - 8 = 76, maka x = ___",
+            "apiExpression": "(76 + 8) / 12",
+            "wrongChoices": ["7", "6", "8"]
+          }
+        ]
+      }
+    ]
+  }
+]
