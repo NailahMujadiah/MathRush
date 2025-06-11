@@ -10,8 +10,8 @@
         android:id="@+id/btnChoice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/button"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        android:text="Pilihan Jawaban" />
+        android:text="@string/pilihan_jawaban" />
 </LinearLayout>

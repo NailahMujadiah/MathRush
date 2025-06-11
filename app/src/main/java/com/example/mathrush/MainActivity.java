@@ -19,14 +19,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        userId = getIntent().getIntExtra("userId", -1);
+        userId = getIntent().getIntExtra("user_id", -1);
+        getSharedPreferences("USER_PREF", MODE_PRIVATE)
+                .edit()
+                .putInt("user_id", userId)
+                .apply();
         bottomNav = findViewById(R.id.bottom_nav);// Ambil dari LoginActivity
 
-//        ProfileFragment profileFragment = new ProfileFragment();
-//        Bundle bundle = new Bundle();
-//        bundle.putInt("userId", userId);
-//        profileFragment.setArguments(bundle);
-        // Fragment default (HomeFragment)
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, new com.example.mathrush.HomeFragment())
                 .commit();
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             if (itemId == R.id.nav_home) {
                 HomeFragment homeFragment = new HomeFragment();
                 Bundle bundle = new Bundle();
-                bundle.putInt("userId", userId); // ✅ kirim userId
+                bundle.putInt("user_id", userId); // ✅ kirim userId
                 homeFragment.setArguments(bundle);
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragment_container, homeFragment)
@@ -49,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (itemId == R.id.nav_profile) {
                 selectedFragment = new ProfileFragment();
                 Bundle bundle = new Bundle();
-                bundle.putInt("userId", userId); // kirim userId ke ProfileFragment
+                bundle.putInt("user_id", userId); // kirim userId ke ProfileFragment
                 selectedFragment.setArguments(bundle);
             }
 

@@ -1,9 +1,11 @@
 package com.example.mathrush;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,6 +28,8 @@ import java.util.List;
 public class HomeFragment extends Fragment {
 
     private RecyclerView rvTopics;
+    private TextView tvGreeting;
+    private AppDatabaseHelper dbHelper;
     private int userId;
 
     public HomeFragment() {
@@ -43,17 +47,25 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         rvTopics = view.findViewById(R.id.rvTopics);
+        tvGreeting = view.findViewById(R.id.tvGreeting);
         rvTopics.setLayoutManager(new LinearLayoutManager(getContext()));
 
         List<QuestionsItem> topicList = loadQuestionsFromJson();
 
-        // Ambil userId dari arguments dulu, fallback ke MainActivity kalau null
-        if (getArguments() != null) {
-            userId = getArguments().getInt("userId", -1);
-        }
+        dbHelper = new AppDatabaseHelper(getContext());
 
-        if (userId == -1 && getActivity() instanceof MainActivity) {
+        if (getActivity() instanceof MainActivity) {
             userId = ((MainActivity) getActivity()).getUserId();
+            Log.d("CEK_USERID", "userId final yang dipakai di HomeFragment: " + userId);
+
+            // ❗️Baru panggil username setelah userId valid
+            UserModel user = dbHelper.getUserById(userId);
+            if (user != null) {
+                tvGreeting.setText("Hai, " + user.getUsername() + "!");
+            } else {
+                tvGreeting.setText("Hai, User!");
+                Log.e("HomeFragment", "User dengan ID " + userId + " tidak ditemukan!");
+            }
         }
 
         TopicAdapter adapter = new TopicAdapter(requireContext(), topicList, userId, (topic, userId) -> {
@@ -66,6 +78,8 @@ public class HomeFragment extends Fragment {
 
 
         rvTopics.setAdapter(adapter);
+        Log.d("CEK_USERID", "userId final yang dipakai di fragment: " + userId);
+
     }
 
     private List<QuestionsItem> loadQuestionsFromJson() {

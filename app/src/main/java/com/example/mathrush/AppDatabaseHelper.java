@@ -15,6 +15,7 @@ import com.example.mathrush.UserModel;
 import com.example.mathrush.QuizProgressModel;
 import com.example.mathrush.BadgeModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AppDatabaseHelper extends SQLiteOpenHelper {
@@ -100,7 +101,7 @@ public class AppDatabaseHelper extends SQLiteOpenHelper {
         db.insert("user_quiz_progress", null, values);
     }
 
-    // Tambahkan skor ke quiz_progress
+
     public void addOrUpdateQuizProgress(int userId, String topic, String level, int addedScore, boolean isLastQuestion) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -174,7 +175,7 @@ public class AppDatabaseHelper extends SQLiteOpenHelper {
         while (allCursor.moveToNext()) {
             int uid = allCursor.getInt(allCursor.getColumnIndexOrThrow("user_id"));
             String topik = allCursor.getString(allCursor.getColumnIndexOrThrow("topic"));
-            Log.d("DB_CEK", "user_id: " + uid + ", topik: " + topik);
+            Log.d("DB_CEK", "user_id: " + userId + ", topik: " + topik);
         }
         allCursor.close();
 
@@ -239,6 +240,50 @@ public class AppDatabaseHelper extends SQLiteOpenHelper {
             Log.d("DEBUG_PROGRESS", "Tabel user_quiz_progress kosong.");
         }
         cursor.close();
+    }
+
+    public int getTotalScoreByUserId(int userId) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(
+                "SELECT SUM(score) AS total_score FROM user_quiz_progress WHERE user_id = ?",
+                new String[]{String.valueOf(userId)}
+        );
+
+        int totalScore = 0;
+        if (cursor.moveToFirst()) {
+            totalScore = cursor.getInt(cursor.getColumnIndexOrThrow("total_score"));
+        }
+
+        cursor.close();
+        return totalScore;
+    }
+
+    public List<UserModel> getAllUsersWithTotalScore() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        List<UserModel> userList = new ArrayList<>();
+
+        String query = "SELECT users.id, users.username, users.password, " +
+                "IFNULL(SUM(user_quiz_progress.score), 0) AS total_score " +
+                "FROM users " +
+                "LEFT JOIN user_quiz_progress ON users.id = user_quiz_progress.user_id " +
+                "GROUP BY users.id " +
+                "ORDER BY total_score DESC";
+
+        Cursor cursor = db.rawQuery(query, null);
+        if (cursor.moveToFirst()) {
+            do {
+                int id = cursor.getInt(cursor.getColumnIndexOrThrow("id"));
+                String username = cursor.getString(cursor.getColumnIndexOrThrow("username"));
+                String password = cursor.getString(cursor.getColumnIndexOrThrow("password"));
+                int totalScore = cursor.getInt(cursor.getColumnIndexOrThrow("total_score"));
+
+                UserModel user = new UserModel(id, username, password);
+                user.setTotalScore(totalScore); // pastikan UserModel punya field ini
+                userList.add(user);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        return userList;
     }
 
 

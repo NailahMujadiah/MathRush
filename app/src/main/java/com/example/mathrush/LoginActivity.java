@@ -49,7 +49,7 @@ public class LoginActivity extends Activity {
                     if (userId != -1) {
                         Toast.makeText(LoginActivity.this, "Login berhasil", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                        intent.putExtra("userId", userId);
+                        intent.putExtra("user_id", userId);
                         startActivity(intent);
                         finish();
                     } else {

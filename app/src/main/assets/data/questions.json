@@ -79,7 +79,7 @@
             "id": "T01-M01-Q01",
             "displayQuestion": "23 + 17 = ___",
             "apiExpression": "23+17",
-            "wrongChoices": ["37", "40", "43"]
+            "wrongChoices": ["37", "47", "43"]
           },
           {
             "id": "T01-M01-Q02",
@@ -422,61 +422,61 @@
           {
             "id": "T03-E03-Q01",
             "displayQuestion": "2 x 3 = ___",
-            "apiExpression": "2x3",
+            "apiExpression": "2*3",
             "wrongChoices": ["8", "5", "7"]
           },
           {
             "id": "T03-E03-Q02",
             "displayQuestion": "5 x 4 = ___",
-            "apiExpression": "5-4",
+            "apiExpression": "5*4",
             "wrongChoices": ["14", "7", "12"]
           },
           {
             "id": "T03-E03-Q03",
             "displayQuestion": "1 x 6 = ___",
-            "apiExpression": "1x6",
+            "apiExpression": "1*6",
             "wrongChoices": ["10", "4", "7"]
           },
           {
             "id": "T03-E03-Q04",
             "displayQuestion": "3 x 3 = ___",
-            "apiExpression": "3x3",
+            "apiExpression": "3*3",
             "wrongChoices": ["8", "7", "14"]
           },
           {
             "id": "T03-E03-Q05",
             "displayQuestion": "4 x 2 = ___",
-            "apiExpression": "4x2",
+            "apiExpression": "4*2",
             "wrongChoices": ["9", "0", "2"]
           },
           {
             "id": "T03-E03-Q06",
             "displayQuestion": "7 x 1 = ___",
-            "apiExpression": "7x1",
+            "apiExpression": "7*1",
             "wrongChoices": ["8", "4", "1"]
           },
           {
             "id": "T03-E03-Q07",
             "displayQuestion": "6 x 2 = ___",
-            "apiExpression": "6x2",
+            "apiExpression": "6*2",
             "wrongChoices": ["9", "8", "6"]
           },
           {
             "id": "T03-E03-Q08",
             "displayQuestion": "8 x 0 = ___",
-            "apiExpression": "8x0",
+            "apiExpression": "8*0",
             "wrongChoices": ["1", "8", "4"]
           },
           {
             "id": "T03-E03-Q09",
             "displayQuestion": "9 x 1 = ___",
-            "apiExpression": "9x1",
+            "apiExpression": "9*1",
             "wrongChoices": ["4", "8", "5"]
           },
           {
             "id": "T03-E03-Q10",
             "displayQuestion": "10 x 2 = ___",
-            "apiExpression": "10x2",
+            "apiExpression": "10*2",
             "wrongChoices": ["9", "8", "12"]
           }
         ]
@@ -488,61 +488,61 @@
           {
             "id": "T03-M03-Q01",
             "displayQuestion": "12 x 3 = ___",
-            "apiExpression": "12x3",
+            "apiExpression": "12*3",
             "wrongChoices": ["24", "15", "37"]
           },
           {
             "id": "T03-M03-Q02",
             "displayQuestion": "14 x 5 = ___",
-            "apiExpression": "14x5",
+            "apiExpression": "14*5",
             "wrongChoices": ["44", "38", "36"]
           },
           {
             "id": "T03-M03-Q03",
             "displayQuestion": "17 x 2 = ___",
-            "apiExpression": "17x2",
+            "apiExpression": "17*2",
             "wrongChoices": ["62", "52", "22"]
           },
           {
             "id": "T03-M03-Q04",
             "displayQuestion": "11 x 4 = ___",
-            "apiExpression": "11x4",
+            "apiExpression": "11*4",
             "wrongChoices": ["74", "35", "44"]
           },
           {
             "id": "T03-M03-Q05",
             "displayQuestion": "16 x 6 = ___",
-            "apiExpression": "16x6",
+            "apiExpression": "1686",
             "wrongChoices": ["42", "45", "33"]
           },
           {
             "id": "T03-M03-Q06",
             "displayQuestion": "15 x 7 = ___",
-            "apiExpression": "15x7",
+            "apiExpression": "15*7",
             "wrongChoices": ["33", "24", "27"]
           },
           {
             "id": "T03-M03-Q07",
             "displayQuestion": "13 x 8 = ___",
-            "apiExpression": "13x8",
+            "apiExpression": "13*8",
             "wrongChoices": ["42", "43", "54"]
           },
           {
             "id": "T03-M03-Q08",
             "displayQuestion": "19 x 3 = ___",
-            "apiExpression": "19x3",
+            "apiExpression": "19*3",
             "wrongChoices": ["58", "47", "49"]
           },
           {
             "id": "T03-M03-Q09",
             "displayQuestion": "20 x 4 = ___",
-            "apiExpression": "20x4",
+            "apiExpression": "20*4",
             "wrongChoices": ["36", "24", "35"]
           },
           {
             "id": "T03-M03-Q10",
             "displayQuestion": "18 x 5 = ___",
-            "apiExpression": "18x5",
+            "apiExpression": "18*5",
             "wrongChoices": ["99", "23", "66"]
           }
         ]
@@ -554,61 +554,61 @@
           {
             "id": "T03-H03-Q01",
             "displayQuestion": "12 x 12 = ___",
-            "apiExpression": "12x12",
+            "apiExpression": "12*12",
             "wrongChoices": ["203", "209", "214"]
           },
           {
             "id": "T03-H03-Q02",
             "displayQuestion": "15 x 11 = ___",
-            "apiExpression": "15x11",
+            "apiExpression": "15*11",
             "wrongChoices": ["213", "178", "130"]
           },
           {
             "id": "T03-H03-Q03",
             "displayQuestion": "13 x 14 = ___",
-            "apiExpression": "13x14",
+            "apiExpression": "13*14",
             "wrongChoices": ["560", "142", "433"]
           },
           {
             "id": "T03-H03-Q04",
             "displayQuestion": "16 x 12 = ___",
-            "apiExpression": "16x12",
+            "apiExpression": "16*12",
             "wrongChoices": ["325", "212", "215"]
           },
           {
             "id": "T03-H03-Q05",
             "displayQuestion": "17 x 15 = ___",
-            "apiExpression": "17x15",
+            "apiExpression": "17*15",
             "wrongChoices": ["200", "382", "378"]
           },
           {
             "id": "T03-H03-Q06",
             "displayQuestion": "14 x 13 = ___",
-            "apiExpression": "14x13",
+            "apiExpression": "14*13",
             "wrongChoices": ["209", "215", "217"]
           },
           {
             "id": "T03-H03-Q07",
             "displayQuestion": "19 x 11 = ___",
-            "apiExpression": "19x11",
+            "apiExpression": "19*11",
             "wrongChoices": ["337", "217", "222"]
           },
           {
             "id": "T03-H03-Q08",
             "displayQuestion": "18 x 16 = ___",
-            "apiExpression": "18x16",
+            "apiExpression": "18*16",
             "wrongChoices": ["300", "251", "602"]
           },
           {
             "id": "T03-H03-Q09",
             "displayQuestion": "20 x 12 = ___",
-            "apiExpression": "20x12",
+            "apiExpression": "20*12",
             "wrongChoices": ["275", "265", "335"]
           },
           {
             "id": "T03-H03-Q10",
             "displayQuestion": "25 x 15 = ___",
-            "apiExpression": "25x15",
+            "apiExpression": "25*15",
             "wrongChoices": ["966", "339", "336"]
           }
         ]

@@ -32,7 +32,7 @@ public class LevelFragment extends Fragment {
         LevelFragment fragment = new LevelFragment();
         Bundle args = new Bundle();
         args.putParcelable(ARG_SELECTED_TOPIC, topic);
-        args.putInt("userId", userId);// make sure QuestionsItem Parcelable
+        args.putInt("user_id", userId);// make sure QuestionsItem Parcelable
         fragment.setArguments(args);
         return fragment;
     }
@@ -40,11 +40,20 @@ public class LevelFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             selectedTopic = getArguments().getParcelable(ARG_SELECTED_TOPIC);
-            userId = getArguments().getInt("userId"); // ✅ ambil userId di sini
+            userId = getArguments().getInt("user_id");
+        }
+
+        if (getActivity() instanceof MainActivity) {
+            // Optional fallback, tapi udah diambil dari argument juga
+            if (userId == 0) {
+                userId = ((MainActivity) getActivity()).getUserId();
+            }
         }
     }
+
 
 
     @Nullable

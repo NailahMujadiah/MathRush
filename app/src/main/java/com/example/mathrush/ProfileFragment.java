@@ -1,5 +1,6 @@
 package com.example.mathrush;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,14 +10,18 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProfileFragment extends Fragment {
 
     private RecyclerView rvProgress;
     private TextView tvUsername;
+    private Button btnLogout;
+    private int userId;
     private AppDatabaseHelper dbHelper;
 
     @Override
@@ -27,22 +32,40 @@ public class ProfileFragment extends Fragment {
         rvProgress = view.findViewById(R.id.rvProgress);
         rvProgress.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        btnLogout = view.findViewById(R.id.btnLogout);
+
         tvUsername = view.findViewById(R.id.tvUsername);
         dbHelper = new AppDatabaseHelper(getContext());
 
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            int userId = bundle.getInt("userId", -1);
+        // Ambil userId langsung dari MainActivity
+        if (getActivity() instanceof MainActivity) {
+            userId = ((MainActivity) getActivity()).getUserId();
+            Log.d("CEK_USERID", "userId final yang dipakai di ProfileFragment: " + userId);
+        }
 
-            // 🚀 Pindahin query berat ke thread background
+        btnLogout.setOnClickListener(v -> {
+            // Optional: bisa tambahin clear session kalau simpan session di SharedPreferences
+            Intent intent = new Intent(getActivity(), LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // biar nggak bisa balik ke MainActivity
+            startActivity(intent);
+        });
+
+        // Pastikan userId valid (> 0) baru lanjut
+        if (userId > 0) {
+            int total = dbHelper.getTotalScoreByUserId(userId);
+            Log.d("TOTAL_SKOR", "Total skor user: " + total);
+
+            ProgressAdapter emptyAdapter = new ProgressAdapter(new ArrayList<>());
+            rvProgress.setAdapter(emptyAdapter);
+
             new Thread(() -> {
                 List<QuizProgressModel> progressList = dbHelper.getUserProgressList(userId);
-                UserModel user = dbHelper.getUserById(userId); // kamu bisa bikin query langsung di DBHelper
+                Log.d("DEBUG_PROGRESS", "Total progress ditemukan: " + progressList.size());
+                UserModel user = dbHelper.getUserById(userId);
 
                 Log.d("ProfileFragment", "Jumlah progress: " + progressList.size());
 
                 requireActivity().runOnUiThread(() -> {
-                    // Update UI di main thread
                     ProgressAdapter adapter = new ProgressAdapter(progressList);
                     rvProgress.setAdapter(adapter);
 
@@ -54,8 +77,11 @@ public class ProfileFragment extends Fragment {
                     }
                 });
             }).start();
+        } else {
+            Log.e("ProfileFragment", "UserId tidak valid: " + userId);
         }
 
         return view;
     }
+
 }

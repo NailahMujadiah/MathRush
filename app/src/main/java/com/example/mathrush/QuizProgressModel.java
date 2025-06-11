@@ -3,6 +3,12 @@ package com.example.mathrush;
 public class QuizProgressModel {
     private int id;
     private int userId;
+
+    public String getTitle() {
+        return title;
+    }
+
+    private String title;
     private String topic;
     private String level;
     private int score;

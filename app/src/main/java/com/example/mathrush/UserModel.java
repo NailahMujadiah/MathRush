@@ -5,6 +5,16 @@ public class UserModel {
     private String username;
     private String password;
 
+    public int getTotalScore() {
+        return totalScore;
+    }
+
+    public void setTotalScore(int totalScore) {
+        this.totalScore = totalScore;
+    }
+
+    private int totalScore;
+
     public UserModel(int id, String username, String password) {
         this.id = id;
         this.username = username;

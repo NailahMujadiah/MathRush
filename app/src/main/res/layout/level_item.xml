@@ -5,11 +5,13 @@
     android:layout_margin="8dp"
     android:elevation="4dp">
 
+
     <TextView
         android:id="@+id/tvDifficulty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Level"
+        android:fontFamily="@font/poppins"
         android:padding="16dp"
         android:textSize="18sp"
         android:textStyle="bold"

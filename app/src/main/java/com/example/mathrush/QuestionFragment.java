@@ -37,7 +37,7 @@ public class QuestionFragment extends Fragment {
 
     private ArrayList<QuestionsItem> questionList;
     private int currentQuestionIndex = 0;
-
+    private AppDatabaseHelper dbHelper;
     private int userId;
     private String topic;
     private String level;
@@ -62,7 +62,7 @@ public class QuestionFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             questionList = getArguments().getParcelableArrayList(ARG_QUESTIONS);
-            userId = getArguments().getInt(ARG_USER_ID, -1);
+            userId = getArguments().getInt(ARG_USER_ID, userId);
             topic = getArguments().getString(ARG_TOPIC, "");
             level = getArguments().getString(ARG_LEVEL, "");
         }
@@ -111,16 +111,17 @@ public class QuestionFragment extends Fragment {
                         List<String> allChoices = new ArrayList<>(question.getWrongChoices());
                         allChoices.add(correctAnswer);
                         Collections.shuffle(allChoices);
-
+                        dbHelper = new AppDatabaseHelper(getContext());
                         choicesAdapter = new ChoicesAdapter(requireContext(), allChoices, selected -> {
                             if (selected.equals(correctAnswer)) {
                                 Activity activity = getActivity();
                                 if (activity != null && !activity.isFinishing()) {
                                     activity.runOnUiThread(() ->
                                             Toast.makeText(activity.getApplicationContext(), "Jawaban benar!", Toast.LENGTH_SHORT).show()
+
                                     );
                                 }
-
+                                dbHelper.printAllProgressDebug();
                                 // Tambah skor ke database
                                 AppDatabaseHelper dbHelper = new AppDatabaseHelper(requireContext());
                                 boolean isLast = (currentQuestionIndex == questionList.size() - 1);
