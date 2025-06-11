@@ -25,11 +25,14 @@ public class LevelFragment extends Fragment {
 
     private QuestionsItem selectedTopic;
     private RecyclerView rvLevels;
+    private int userId;
 
-    public static LevelFragment newInstance(QuestionsItem topic) {
+
+    public static LevelFragment newInstance(QuestionsItem topic, int userId) {
         LevelFragment fragment = new LevelFragment();
         Bundle args = new Bundle();
-        args.putParcelable(ARG_SELECTED_TOPIC, topic); // make sure QuestionsItem Parcelable
+        args.putParcelable(ARG_SELECTED_TOPIC, topic);
+        args.putInt("userId", userId);// make sure QuestionsItem Parcelable
         fragment.setArguments(args);
         return fragment;
     }
@@ -39,14 +42,17 @@ public class LevelFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             selectedTopic = getArguments().getParcelable(ARG_SELECTED_TOPIC);
+            userId = getArguments().getInt("userId"); // ✅ ambil userId di sini
         }
     }
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_level, container, false);
+
     }
 
     @Override
@@ -74,11 +80,12 @@ public class LevelFragment extends Fragment {
             List<QuestionsItem> questions = level.getQuestions();
 
             if (questions != null && !questions.isEmpty()) {
-                // Convert ke ArrayList karena Bundle butuh ParcelableArrayList
                 ArrayList<QuestionsItem> questionList = new ArrayList<>(questions);
 
-                // Buat fragment baru dan kirim data
-                QuestionFragment fragment = QuestionFragment.newInstance(questionList);
+                String topic = selectedTopic.getTopicId();
+                String levelName = level.getId();
+
+                QuestionFragment fragment = QuestionFragment.newInstance(questionList, userId, topic, levelName);
                 requireActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragment_container, fragment)
                         .addToBackStack(null)
@@ -87,6 +94,7 @@ public class LevelFragment extends Fragment {
                 Toast.makeText(getContext(), "Soal belum tersedia untuk level ini", Toast.LENGTH_SHORT).show();
             }
         });
+
 
 
         rvLevels.setAdapter(adapter);

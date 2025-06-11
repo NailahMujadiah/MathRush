@@ -26,6 +26,7 @@ import java.util.List;
 public class HomeFragment extends Fragment {
 
     private RecyclerView rvTopics;
+    private int userId;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -46,13 +47,23 @@ public class HomeFragment extends Fragment {
 
         List<QuestionsItem> topicList = loadQuestionsFromJson();
 
-        TopicAdapter adapter = new TopicAdapter(requireContext(), topicList, selectedTopic -> {
-            LevelFragment fragment = LevelFragment.newInstance(selectedTopic);
+        // Ambil userId dari arguments dulu, fallback ke MainActivity kalau null
+        if (getArguments() != null) {
+            userId = getArguments().getInt("userId", -1);
+        }
+
+        if (userId == -1 && getActivity() instanceof MainActivity) {
+            userId = ((MainActivity) getActivity()).getUserId();
+        }
+
+        TopicAdapter adapter = new TopicAdapter(requireContext(), topicList, userId, (topic, userId) -> {
+            LevelFragment fragment = LevelFragment.newInstance(topic, userId);
             requireActivity().getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, fragment)
                     .addToBackStack(null)
                     .commit();
         });
+
 
         rvTopics.setAdapter(adapter);
     }

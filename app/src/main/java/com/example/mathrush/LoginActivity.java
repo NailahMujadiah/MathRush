@@ -16,6 +16,7 @@ public class LoginActivity extends Activity {
 
     private EditText etUsername, etPassword;
     private Button btnLogin, btnToRegister;
+    private int userId;
     private AppDatabaseHelper dbHelper;
 
     @SuppressLint("MissingInflatedId")
@@ -40,19 +41,24 @@ public class LoginActivity extends Activity {
                 return;
             }
 
-            boolean loginSuccess = dbHelper.checkLogin(username, password);
-            if (loginSuccess) {
-                int userId = dbHelper.getUserId(username);
-                Toast.makeText(LoginActivity.this, "Login berhasil", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                intent.putExtra("user_id", userId);
-                startActivity(intent);
-                finish();
-            } else {
-                Toast.makeText(LoginActivity.this, "Username atau password salah", Toast.LENGTH_SHORT).show();
-            }
+            // Pindahkan proses login ke thread background
+            new Thread(() -> {
+                int userId = dbHelper.loginAndGetUserId(username, password);
 
+                runOnUiThread(() -> {
+                    if (userId != -1) {
+                        Toast.makeText(LoginActivity.this, "Login berhasil", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        intent.putExtra("userId", userId);
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        Toast.makeText(LoginActivity.this, "Username atau password salah", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }).start();// Start background thread
         });
+
 
         btnToRegister.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);

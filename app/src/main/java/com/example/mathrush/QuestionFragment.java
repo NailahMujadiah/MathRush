@@ -1,6 +1,6 @@
-// 1. QuestionFragment.java
 package com.example.mathrush;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -31,17 +31,28 @@ import retrofit2.Response;
 public class QuestionFragment extends Fragment {
 
     private static final String ARG_QUESTIONS = "questions";
+    private static final String ARG_USER_ID = "userId";
+    private static final String ARG_TOPIC = "topic";
+    private static final String ARG_LEVEL = "level";
+
     private ArrayList<QuestionsItem> questionList;
     private int currentQuestionIndex = 0;
+
+    private int userId;
+    private String topic;
+    private String level;
 
     private TextView tvQuestion;
     private RecyclerView rvChoices;
     private ChoicesAdapter choicesAdapter;
 
-    public static QuestionFragment newInstance(ArrayList<QuestionsItem> questions) {
+    public static QuestionFragment newInstance(ArrayList<QuestionsItem> questions, int userId, String topic, String level) {
         QuestionFragment fragment = new QuestionFragment();
         Bundle args = new Bundle();
         args.putParcelableArrayList(ARG_QUESTIONS, questions);
+        args.putInt(ARG_USER_ID, userId);
+        args.putString(ARG_TOPIC, topic);
+        args.putString(ARG_LEVEL, level);
         fragment.setArguments(args);
         return fragment;
     }
@@ -51,6 +62,9 @@ public class QuestionFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             questionList = getArguments().getParcelableArrayList(ARG_QUESTIONS);
+            userId = getArguments().getInt(ARG_USER_ID, -1);
+            topic = getArguments().getString(ARG_TOPIC, "");
+            level = getArguments().getString(ARG_LEVEL, "");
         }
     }
 
@@ -74,11 +88,13 @@ public class QuestionFragment extends Fragment {
 
     private void loadQuestion() {
         if (currentQuestionIndex >= questionList.size()) {
-            Toast.makeText(getContext(), "Semua soal selesai!", Toast.LENGTH_LONG).show();
+            showSafeToast("Semua soal selesai!");
             new Handler().postDelayed(() -> {
-                requireActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container, new HomeFragment())
-                        .commit();
+                if (isAdded()) {
+                    requireActivity().getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, new HomeFragment())
+                            .commit();
+                }
             }, 1500);
             return;
         }
@@ -98,27 +114,49 @@ public class QuestionFragment extends Fragment {
 
                         choicesAdapter = new ChoicesAdapter(requireContext(), allChoices, selected -> {
                             if (selected.equals(correctAnswer)) {
-                                Toast.makeText(getContext(), "Benar!", Toast.LENGTH_SHORT).show();
+                                Activity activity = getActivity();
+                                if (activity != null && !activity.isFinishing()) {
+                                    activity.runOnUiThread(() ->
+                                            Toast.makeText(activity.getApplicationContext(), "Jawaban benar!", Toast.LENGTH_SHORT).show()
+                                    );
+                                }
+
+                                // Tambah skor ke database
+                                AppDatabaseHelper dbHelper = new AppDatabaseHelper(requireContext());
+                                boolean isLast = (currentQuestionIndex == questionList.size() - 1);
+                                dbHelper.addOrUpdateQuizProgress(userId, topic, level, 10, isLast);
+
                                 new Handler().postDelayed(() -> {
                                     currentQuestionIndex++;
                                     loadQuestion();
                                 }, 1000);
                             } else {
-                                Toast.makeText(getContext(), "Salah!", Toast.LENGTH_SHORT).show();
+                                showSafeToast("Salah!");
                             }
                         });
 
                         rvChoices.setAdapter(choicesAdapter);
                     } catch (IOException e) {
                         e.printStackTrace();
+                        showSafeToast("Gagal memproses jawaban");
                     }
+                } else {
+                    showSafeToast("Gagal ambil jawaban");
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 Log.e("QuestionFragment", "API call gagal", t);
+                showSafeToast("Terjadi kesalahan jaringan");
             }
         });
+    }
+
+    private void showSafeToast(String message) {
+        Activity activity = getActivity();
+        if (activity != null && isAdded()) {
+            Toast.makeText(activity.getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+        }
     }
 }

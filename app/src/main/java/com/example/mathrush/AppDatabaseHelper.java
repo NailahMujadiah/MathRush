@@ -1,10 +1,15 @@
 package com.example.mathrush;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import androidx.annotation.Nullable;
+
 import com.example.mathrush.MappingHelper;
 import com.example.mathrush.UserModel;
 import com.example.mathrush.QuizProgressModel;
@@ -67,25 +72,19 @@ public class AppDatabaseHelper extends SQLiteOpenHelper {
         return result != -1;
     }
 
-    public boolean checkLogin(String username, String password) {
+    @SuppressLint("Range")
+    public int loginAndGetUserId(String username, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM users WHERE username=? AND password=?", new String[]{username, password});
-        boolean result = cursor.getCount() > 0;
-        cursor.close();
-        return result;
-    }
-
-    public int getUserId(String username) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT id FROM users WHERE username=?", new String[]{username});
+        Cursor cursor = db.rawQuery("SELECT id FROM users WHERE username = ? AND password = ?",
+                new String[]{username, password});
+        int userId = -1;
         if (cursor.moveToFirst()) {
-            int userId = cursor.getInt(0);
-            cursor.close();
-            return userId;
+            userId = cursor.getInt(cursor.getColumnIndex("id"));
         }
         cursor.close();
-        return -1;
+        return userId;
     }
+
 
     // ✅ QUIZ PROGRESS SECTION
 
@@ -100,6 +99,42 @@ public class AppDatabaseHelper extends SQLiteOpenHelper {
 
         db.insert("user_quiz_progress", null, values);
     }
+
+    // Tambahkan skor ke quiz_progress
+    public void addOrUpdateQuizProgress(int userId, String topic, String level, int addedScore, boolean isLastQuestion) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT score FROM user_quiz_progress WHERE user_id=? AND topic=? AND level=?",
+                new String[]{String.valueOf(userId), topic, level});
+
+        if (cursor.moveToFirst()) {
+            int currentScore = cursor.getInt(0);
+            int newScore = currentScore + addedScore;
+            String newStatus = isLastQuestion ? "completed" : "in_progress";
+
+            ContentValues values = new ContentValues();
+            values.put("score", newScore);
+            values.put("status", newStatus);
+
+            db.update("user_quiz_progress", values, "user_id=? AND topic=? AND level=?",
+                    new String[]{String.valueOf(userId), topic, level});
+        } else {
+            String status = isLastQuestion ? "completed" : "in_progress";
+
+            ContentValues values = new ContentValues();
+            values.put("user_id", userId);
+            values.put("topic", topic);
+            values.put("level", level);
+            values.put("score", addedScore);
+            values.put("status", status);
+
+            db.insert("user_quiz_progress", null, values);
+        }
+
+        cursor.close();
+    }
+
+
 
     public boolean isQuizCompleted(int userId, String topic, String level) {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -133,10 +168,24 @@ public class AppDatabaseHelper extends SQLiteOpenHelper {
 
     public List<QuizProgressModel> getUserProgressList(int userId) {
         SQLiteDatabase db = this.getReadableDatabase();
+
+        // Log seluruh data di tabel user_quiz_progress
+        Cursor allCursor = db.rawQuery("SELECT * FROM user_quiz_progress", null);
+        while (allCursor.moveToNext()) {
+            int uid = allCursor.getInt(allCursor.getColumnIndexOrThrow("user_id"));
+            String topik = allCursor.getString(allCursor.getColumnIndexOrThrow("topic"));
+            Log.d("DB_CEK", "user_id: " + uid + ", topik: " + topik);
+        }
+        allCursor.close();
+
+        // Query yang dipake buat dapetin data user tertentu
         Cursor cursor = db.rawQuery("SELECT * FROM user_quiz_progress WHERE user_id = ?",
                 new String[]{String.valueOf(userId)});
+        Log.d("DB_CEK", "userId yang dipakai untuk query: " + userId);
+
         return MappingHelper.mapToQuizProgressList(cursor);
     }
+
 
     public List<BadgeModel> getUserBadges(int userId) {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -145,11 +194,24 @@ public class AppDatabaseHelper extends SQLiteOpenHelper {
         return MappingHelper.mapToBadgeList(cursor);
 
     }
-    public List<UserModel> getAllUsers() {
+    @Nullable
+    public UserModel getUserById(int userId) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM users", null);
-        return MappingHelper.mapToUserList(cursor);
+        Cursor cursor = db.rawQuery("SELECT * FROM users WHERE id = ?", new String[]{String.valueOf(userId)});
+
+        UserModel user = null;
+        if (cursor.moveToFirst()) {
+            @SuppressLint("Range") int id = cursor.getInt(cursor.getColumnIndex("id"));
+            @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
+            @SuppressLint("Range") String password = cursor.getString(cursor.getColumnIndex("password"));
+
+            user = new UserModel(id, username, password);
+        }
+
+        cursor.close();
+        return user;
     }
+
 
     public boolean isUsernameTaken(String username) {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -157,6 +219,26 @@ public class AppDatabaseHelper extends SQLiteOpenHelper {
         boolean exists = cursor.moveToFirst();
         cursor.close();
         return exists;
+    }
+    public void printAllProgressDebug() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM user_quiz_progress", null);
+        if (cursor.moveToFirst()) {
+            do {
+                int id = cursor.getInt(cursor.getColumnIndexOrThrow("id"));
+                int userId = cursor.getInt(cursor.getColumnIndexOrThrow("user_id"));
+                String topic = cursor.getString(cursor.getColumnIndexOrThrow("topic"));
+                String level = cursor.getString(cursor.getColumnIndexOrThrow("level"));
+                int score = cursor.getInt(cursor.getColumnIndexOrThrow("score"));
+                String status = cursor.getString(cursor.getColumnIndexOrThrow("status"));
+                String timestamp = cursor.getString(cursor.getColumnIndexOrThrow("timestamp"));
+
+                Log.d("DEBUG_PROGRESS", "ID: " + id + ", userId: " + userId + ", topic: " + topic + ", level: " + level + ", score: " + score + ", status: " + status + ", timestamp: " + timestamp);
+            } while (cursor.moveToNext());
+        } else {
+            Log.d("DEBUG_PROGRESS", "Tabel user_quiz_progress kosong.");
+        }
+        cursor.close();
     }
 
 

@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:padding="12dp">
+
+    <TextView android:id="@+id/tvTopicLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Topik - Level" android:textStyle="bold"/>
+
+    <TextView android:id="@+id/tvScoreStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skor | Status"/>
+
+    <TextView android:id="@+id/tvTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timestamp"
+        android:textSize="12sp"/>
+</LinearLayout>

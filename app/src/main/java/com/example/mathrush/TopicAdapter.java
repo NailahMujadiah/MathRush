@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.mathrush.R;
+
 import com.example.mathrush.questions.QuestionsItem;
 
 import java.util.List;
@@ -18,15 +18,19 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
 
     private List<QuestionsItem> topicList;
     private Context context;
+    private int userId;
     private OnTopicClickListener listener;
 
+    // Ubah interface: sekarang include userId
     public interface OnTopicClickListener {
-        void onTopicClick(QuestionsItem topic);
+        void onTopicClick(QuestionsItem topic, int userId);
     }
 
-    public TopicAdapter(Context context, List<QuestionsItem> topicList, OnTopicClickListener listener) {
+    // Constructor sekarang include userId
+    public TopicAdapter(Context context, List<QuestionsItem> topicList, int userId, OnTopicClickListener listener) {
         this.context = context;
         this.topicList = topicList;
+        this.userId = userId;
         this.listener = listener;
     }
 
@@ -47,7 +51,8 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
                 topic.getIcon(), "drawable", context.getPackageName());
         holder.imgTopicIcon.setImageResource(imageRes);
 
-        holder.itemView.setOnClickListener(v -> listener.onTopicClick(topic));
+        // Kirim topic + userId ke listener
+        holder.itemView.setOnClickListener(v -> listener.onTopicClick(topic, userId));
     }
 
     @Override

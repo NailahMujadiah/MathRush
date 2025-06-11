@@ -1,9 +1,11 @@
 package com.example.mathrush;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,13 +13,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the  factory method to
- * create an instance of this fragment.
- */
 public class ProfileFragment extends Fragment {
 
+    private RecyclerView rvProgress;
     private TextView tvUsername;
     private AppDatabaseHelper dbHelper;
 
@@ -26,6 +24,9 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
+        rvProgress = view.findViewById(R.id.rvProgress);
+        rvProgress.setLayoutManager(new LinearLayoutManager(getContext()));
+
         tvUsername = view.findViewById(R.id.tvUsername);
         dbHelper = new AppDatabaseHelper(getContext());
 
@@ -33,24 +34,28 @@ public class ProfileFragment extends Fragment {
         if (bundle != null) {
             int userId = bundle.getInt("userId", -1);
 
-            if (userId != -1) {
-                UserModel user = getUserById(userId);
-                if (user != null) {
-                    tvUsername.setText(user.getUsername());
-                }
-            }
+            // 🚀 Pindahin query berat ke thread background
+            new Thread(() -> {
+                List<QuizProgressModel> progressList = dbHelper.getUserProgressList(userId);
+                UserModel user = dbHelper.getUserById(userId); // kamu bisa bikin query langsung di DBHelper
+
+                Log.d("ProfileFragment", "Jumlah progress: " + progressList.size());
+
+                requireActivity().runOnUiThread(() -> {
+                    // Update UI di main thread
+                    ProgressAdapter adapter = new ProgressAdapter(progressList);
+                    rvProgress.setAdapter(adapter);
+
+                    if (user != null) {
+                        tvUsername.setText(user.getUsername());
+                        Log.d("ProfileFragment", "User ditemukan: " + user.getUsername());
+                    } else {
+                        Log.e("ProfileFragment", "User dengan ID " + userId + " tidak ditemukan!");
+                    }
+                });
+            }).start();
         }
 
         return view;
-    }
-
-    private UserModel getUserById(int userId) {
-        List<UserModel> userList = dbHelper.getAllUsers();
-        for (UserModel user : userList) {
-            if (user.getId() == userId) {
-                return user;
-            }
-        }
-        return null;
     }
 }

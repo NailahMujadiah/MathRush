@@ -59,6 +59,8 @@ public class MappingHelper {
         return list;
     }
 
+
+
     public static List<UserModel> mapToUserList(Cursor cursor) {
         List<UserModel> list = new ArrayList<>();
         if (cursor.moveToFirst()) {
