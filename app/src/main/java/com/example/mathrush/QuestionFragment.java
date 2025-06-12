@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,6 +42,8 @@ public class QuestionFragment extends Fragment {
     private int userId;
     private String topic;
     private String level;
+    private Button btnRefresh;
+
 
     private TextView tvQuestion;
     private RecyclerView rvChoices;
@@ -78,6 +81,11 @@ public class QuestionFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        btnRefresh = view.findViewById(R.id.btnRefresh);
+        btnRefresh.setOnClickListener(v -> {
+            btnRefresh.setVisibility(View.GONE);
+            loadQuestion();
+        });
 
         tvQuestion = view.findViewById(R.id.tvQuestion);
         rvChoices = view.findViewById(R.id.rvChoices);
@@ -122,7 +130,7 @@ public class QuestionFragment extends Fragment {
                                     );
                                 }
                                 dbHelper.printAllProgressDebug();
-                                // Tambah skor ke database
+
                                 AppDatabaseHelper dbHelper = new AppDatabaseHelper(requireContext());
                                 boolean isLast = (currentQuestionIndex == questionList.size() - 1);
                                 dbHelper.addOrUpdateQuizProgress(userId, topic, level, 10, isLast);
@@ -150,6 +158,11 @@ public class QuestionFragment extends Fragment {
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 Log.e("QuestionFragment", "API call gagal", t);
                 showSafeToast("Terjadi kesalahan jaringan");
+
+
+                if (btnRefresh != null) {
+                    btnRefresh.setVisibility(View.VISIBLE);
+                }
             }
         });
     }

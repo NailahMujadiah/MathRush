@@ -23,7 +23,7 @@
         card_view:cardCornerRadius="16dp"
         card_view:cardElevation="8dp"
         android:layout_margin="16dp"
-        android:backgroundTint="#FFFFFF">
+        android:backgroundTint="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"

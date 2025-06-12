@@ -5,4 +5,6 @@
     <color name="background">#2196F3</color>
     <color name="button">#FFC107</color>
     <color name="card">#E3F2FD</color>
+    <color name="nav_bottom">#BBDEFB</color>
+    <color name="topic">#FFFFFF</color>
 </resources>

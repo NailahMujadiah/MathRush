@@ -58,7 +58,7 @@ public class HomeFragment extends Fragment {
             userId = ((MainActivity) getActivity()).getUserId();
             Log.d("CEK_USERID", "userId final yang dipakai di HomeFragment: " + userId);
 
-            // ❗️Baru panggil username setelah userId valid
+
             UserModel user = dbHelper.getUserById(userId);
             if (user != null) {
                 tvGreeting.setText("Hai, " + user.getUsername() + "!");

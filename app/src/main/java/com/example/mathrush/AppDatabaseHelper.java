@@ -10,11 +10,6 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import com.example.mathrush.MappingHelper;
-import com.example.mathrush.UserModel;
-import com.example.mathrush.QuizProgressModel;
-import com.example.mathrush.BadgeModel;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -87,7 +82,6 @@ public class AppDatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    // ✅ QUIZ PROGRESS SECTION
 
     public void insertQuizProgress(int userId, String topic, String level, int score, String status) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -146,7 +140,6 @@ public class AppDatabaseHelper extends SQLiteOpenHelper {
         return result;
     }
 
-    // ✅ BADGE SECTION
 
     public void unlockBadge(int userId, String badgeName) {
         if (!isBadgeUnlocked(userId, badgeName)) {
@@ -170,7 +163,6 @@ public class AppDatabaseHelper extends SQLiteOpenHelper {
     public List<QuizProgressModel> getUserProgressList(int userId) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        // Log seluruh data di tabel user_quiz_progress
         Cursor allCursor = db.rawQuery("SELECT * FROM user_quiz_progress", null);
         while (allCursor.moveToNext()) {
             int uid = allCursor.getInt(allCursor.getColumnIndexOrThrow("user_id"));
@@ -278,7 +270,7 @@ public class AppDatabaseHelper extends SQLiteOpenHelper {
                 int totalScore = cursor.getInt(cursor.getColumnIndexOrThrow("total_score"));
 
                 UserModel user = new UserModel(id, username, password);
-                user.setTotalScore(totalScore); // pastikan UserModel punya field ini
+                user.setTotalScore(totalScore);
                 userList.add(user);
             } while (cursor.moveToNext());
         }

@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:padding="24dp"
     android:gravity="center"
-    android:background="#2196F3">
+    android:background="@color/background">
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
         card_view:cardCornerRadius="16dp"
         card_view:cardElevation="8dp"
         android:layout_margin="16dp"
-        android:backgroundTint="#FFFFFF">
+        android:backgroundTint="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,7 +58,7 @@
                 android:layout_marginTop="24dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/poppins"
-                android:backgroundTint="#FFC107" />
+                android:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnToRegister"
